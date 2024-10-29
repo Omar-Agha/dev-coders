@@ -22,7 +22,7 @@ class ExampleInertiaController extends Controller
         if (request()->wantsJson()) {
             return $this->getExampleList();
         }
-        return Inertia("Examples/index", []);
+        return Inertia("Admin/Examples/index", []);
     }
 
     /**

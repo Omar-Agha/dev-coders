@@ -12,3 +12,9 @@ input:focus {
 .dash-headline {
     font-weight: bold;
 }
+
+@layer base {
+    body {
+        @apply font-ev;
+    }
+}
