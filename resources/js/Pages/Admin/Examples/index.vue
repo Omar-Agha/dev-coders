@@ -1,5 +1,5 @@
 <template>
-    <AppLayout>
+    <AdminLayout>
         <VRow>
 
             <VCol cols="12" class="pb-0">
@@ -136,7 +136,7 @@
         <SnackMessage ref="snackMessage" />
         <PageLoader ref="pageLoader" />
 
-    </AppLayout>
+    </AdminLayout>
 </template>
 
 <script setup>
@@ -145,7 +145,7 @@
 
 import { ref, reactive, watch } from 'vue';
 import { VBreadcrumbs, VBtn, VCard, VCardText, VCol, VDataTableServer, VDialog, VExpansionPanel, VExpansionPanels, VList, VListItem, VListItemTitle, VMenu, VRadio, VRadioGroup, VRow, VSelect, VSkeletonLoader, VSpacer, VSwitch, VTextField, VToolbar, VToolbarTitle } from 'vuetify/lib/components/index.mjs';
-import AppLayout from '@/Layouts/AdminLayout.vue';
+
 import { breadcrumbs, deleteRecordApi, getRecordsListApi, gridHeaders, initialFilterForm } from './core';
 import ConfirmationAlert from '@/Components/ConfirmationDialog.vue';
 import SnackMessage from '@/Components/SnackMessage.vue';
@@ -154,6 +154,8 @@ import { VDateInput } from 'vuetify/lib/labs/components.mjs';
 import { translate } from '@/utils/translation';
 import CreateForm from './CreateForm.vue';
 import UpdateForm from './UpdateForm.vue';
+
+import AdminLayout from '@/Layouts/Admin/AdminLayout.vue';
 
 const menu = ref(false)
 

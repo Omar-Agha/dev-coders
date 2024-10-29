@@ -8,8 +8,9 @@ import { VAppBar, VAppBarNavIcon, VBtn, VCard, VContainer, VIcon, VLayout, VList
 import { useLocale } from 'vuetify/lib/framework.mjs';
 import { translate } from '@/utils/translation';
 import { useI18n } from 'vue-i18n';
-import AppNavigationMenu from './AppNavigationMenus/AppNavigationMenu.vue';
+
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import AppNavigationMenu from './AppNavigationMenus/AppNavigationMenu.vue';
 useI18n
 defineProps({
     title: String,
@@ -108,11 +109,11 @@ console.log(current.value);
                 :temporary="$vuetify.display.mobile">
                 <VList>
                     <VListItem>
-                        <!-- <ApplicationLogo/> -->
+
                         <Link class=" inline-block hover:opacity-80" :href="route('dashboard')">
-                        <!-- <ApplicationLogo /> -->
-                        <ApplicationLogo />
-                        
+
+                        <ApplicationLogo dark="true" />
+
 
                         </Link>
                     </VListItem>
