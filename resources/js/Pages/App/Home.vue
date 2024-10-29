@@ -1,5 +1,6 @@
 <script setup>
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import AppHeaderNav from '@/Layouts/App/AppHeaderNav.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import { VAppBarNavIcon } from 'vuetify/lib/components/index.mjs';
 
@@ -29,32 +30,32 @@ function handleImageError() {
 </script>
 
 <template>
-    <link href="https://fonts.cdnfonts.com/css/elvalle" rel="stylesheet">
 
 
 
-    <div class="p-20 bg-app-primary-dark min-h-screen">
-        <ApplicationLogo />
 
-        <nav class="flex justify-between items-center p-4">
-            <img src="/path/to/logo.png" alt="Logo" class="h-8">
-            <ul class="flex space-x-6 text-white">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <div class=" bg-app-primary-dark min-h-screen ">
 
-        <section class="flex flex-col items-start justify-center space-y-4 p-8">
-            <h1 class="text-4xl font-bold text-white">
-                Your <span class="text-gradient">Vision</span><br>Our <span class="text-gradient-blue">Code</span>
-            </h1>
-            <p class="text-gray-300 max-w-md">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            <button
-                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:scale-105 transition">
-                See More
-            </button>
-        </section>
+        <main class="container mx-auto">
+
+
+          
+
+            <AppHeaderNav />
+
+            <section class="flex flex-col items-start justify-center space-y-4 p-8">
+                <h1 class="text-4xl  text-white font-light">
+                    Your <span class="text-app-primary-glow font-bold">Vision</span><br>
+                    Our <span class="text-app-secondary-glow font-extrabold">Code</span>
+                </h1>
+                <p class="text-gray-300 max-w-md">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                </p>
+                <button class="primary-button">
+                    See More
+                </button>
+            </section>
+        </main>
+
     </div>
 </template>
 

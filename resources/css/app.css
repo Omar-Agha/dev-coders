@@ -18,3 +18,10 @@ input:focus {
         @apply font-ev;
     }
 }
+@layer components {
+    .primary-button {
+        @apply bg-gradient-to-t from-app-secondary-700 to-app-primary-700 text-white px-6 py-2 rounded-lg hover:scale-105 transition
+    }
+
+    /* ... */
+}

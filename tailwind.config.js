@@ -22,13 +22,19 @@ export default {
             },
             colors: {
                 app: {
-                
                     primary: {
+                        //purple
                         DEFAULT: "#884fd7",
                         dark: "#0C0216",
+                        glow: "#DFAEFF",
+                        700: "#9842E8",
                     },
-                    secondary: "#5293d8",
-                    
+
+                    secondary: {
+                        DEFAULT: "#5293d8",
+                        glow: "#A1D6FF",
+                        700: "#0E548E",
+                    },
                 },
             },
         },

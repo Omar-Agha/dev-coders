@@ -10,7 +10,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/elvalle" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/elvalle?styles=95341" rel="stylesheet">
+                
 
     <!-- Scripts -->
     @routes
