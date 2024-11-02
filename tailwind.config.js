@@ -1,6 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -37,8 +38,45 @@ export default {
                     },
                 },
             },
+            keyframes: {
+                wiggle: {
+                    "0%, 100%": { transform: "rotate(-3deg)" },
+                    "50%": { transform: "rotate(3deg)" },
+                },
+
+                float: {
+                    "0%,10%": { transform: "translate(0, 0)" },
+                    "50%": { transform: "translate(15px, -15px)" },
+                },
+                float_y: {
+                    "0%,100%": { transform: "translate(0, 0)" },
+                    "50%": { transform: "translate(0px, 15px)" },
+                },
+               
+
+                float_reverse: {
+                    "0%,100%": { transform: "translate(0, 0)" },
+                    "50%": { transform: "translate(-15px, -15px)" },
+                },
+                computer_scene_horizontal: {
+                    "0%,100%": { transform: "translate(0, 0)" },
+                    "50%": { transform: "translate(15px, 10px)" },
+                },
+                computer_scene_laptop: {
+                    "0%,100%": { transform: "translate(0, 0)" },
+                    // "50%": { transform: "translate(5px, 20px)" },
+                    "50%": { transform: "translate(0px, 15px)" },
+                },
+            },
+            animation: {
+                "float-y": "float_y 3s linear infinite",
+                float: "float 5s linear infinite",
+                "float-reverse": "float_reverse 5s linear infinite",
+                "computer-scene-horizontal": "computer_scene_horizontal 5s linear infinite",
+                "computer-scene-laptop": "computer_scene_laptop 5s linear infinite",
+            },
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, require("tailwindcss-animation-delay")],
 };

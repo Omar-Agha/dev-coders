@@ -1,7 +1,8 @@
 <script setup>
 
 import AdminLayout from '@/Layouts/Admin/AdminLayout.vue';
-import ApiTokenManager from '@/Pages/API/Partials/ApiTokenManager.vue';
+import ApiTokenManager from './Partials/ApiTokenManager.vue';
+
 
 
 defineProps({
