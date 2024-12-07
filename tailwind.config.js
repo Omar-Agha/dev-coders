@@ -35,6 +35,7 @@ export default {
                         DEFAULT: "#5293d8",
                         glow: "#A1D6FF",
                         700: "#0E548E",
+                        600: "#5aa1bf",
                     },
                 },
             },
@@ -52,7 +53,6 @@ export default {
                     "0%,100%": { transform: "translate(0, 0)" },
                     "50%": { transform: "translate(0px, 15px)" },
                 },
-               
 
                 float_reverse: {
                     "0%,100%": { transform: "translate(0, 0)" },
@@ -72,8 +72,10 @@ export default {
                 "float-y": "float_y 3s linear infinite",
                 float: "float 5s linear infinite",
                 "float-reverse": "float_reverse 5s linear infinite",
-                "computer-scene-horizontal": "computer_scene_horizontal 5s linear infinite",
-                "computer-scene-laptop": "computer_scene_laptop 5s linear infinite",
+                "computer-scene-horizontal":
+                    "computer_scene_horizontal 5s linear infinite",
+                "computer-scene-laptop":
+                    "computer_scene_laptop 5s linear infinite",
             },
         },
     },
