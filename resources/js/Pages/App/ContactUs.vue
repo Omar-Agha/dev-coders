@@ -1,0 +1,48 @@
+<template>
+
+    <h2 class="text-white font-bold text-7xl text-center mb">
+        <span class="capitalize">Contact</span>
+        <span class="capitalize text-app-primary-700">U</span>
+        <span class="capitalize text-app-secondary-600">S</span>
+    </h2>
+
+    <div class="flex flex-col gap-3 w-[50%] m-auto">
+        <div class="p-[2px] ">
+            <input type="text" name="name" class="w-full text-white input-transparent-with-border text-center"
+                placeholder="Enter Your Name" />
+        </div>
+        <div class="p-[2px] ">
+            <input type="email" name="email" class="w-full text-white input-transparent-with-border text-center"
+                placeholder="Enter Your Email" />
+        </div>
+        <div class="p-[2px] ">
+            <textarea type="text" name="name" class="w-full text-white input-transparent-with-border text-center"
+                placeholder="Enter Your Message" rows="10" />
+        </div>
+
+        <div class="">
+            <button 
+                class="flex justify-center w-full text-center  items-center px-4 py-2 bg-gradient-to-r from-app-primary-700 to-app-secondary-700 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150">submit</button>
+        </div>
+
+
+    </div>
+
+</template>
+<script setup>
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+
+
+</script>
+
+
+<style scoped>
+.input-transparent-with-border {
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+    /* border-radius: 50px; */
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    background-color: transparent;
+}
+</style>

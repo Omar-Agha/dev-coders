@@ -4,6 +4,11 @@ import Hero from './Hero.vue';
 import AboutUs from './AboutUs.vue';
 import Spacer from '@/Components/Spacer.vue';
 import KnowUs from './KnowUs.vue';
+import OurProject from './OurProject.vue';
+import SpacerSize from '@/enums/SpacerSize';
+import Blogs from './Blogs/Blog.vue';
+import BlogsContainer from './Blogs/BlogsContainer.vue';
+import ContactUs from './ContactUs.vue';
 
 defineProps({
     canLogin: {
@@ -31,11 +36,15 @@ defineProps({
             <Hero class="min-h-[85vh]" />
             <Spacer />
             <AboutUs />
-            <Spacer />
-
-            <Spacer />
-
+            <Spacer :size="SpacerSize.X2" />
             <KnowUs />
+
+            <Spacer :size="SpacerSize.X2" />
+            <OurProject />
+            <Spacer :size="SpacerSize.X2" />
+            <BlogsContainer />
+            <Spacer :size="SpacerSize.X2" />
+            <ContactUs />
         </main>
 
 
