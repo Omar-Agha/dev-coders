@@ -5,6 +5,9 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    experimental: {
+        optimizeUniversalDefaults: true,
+    },
     darkMode: "xyz0090",
 
     content: [

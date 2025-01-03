@@ -1,8 +1,8 @@
 <template>
     <div>
-        <svg width="100%" height="100%" viewBox="0 0 893 670" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%"  height="100%" viewBox="0 0 893 670" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="computer 1">
-                <g id="SquarePlaceHolder" class="animate-computer-scene-horizontal ">
+                <g id="SquarePlaceHolder" class="animate-computer-scene-horizontal will-change-transform">
                     <g id="Group">
                         <g id="Group 59">
                             <path id="Vector"

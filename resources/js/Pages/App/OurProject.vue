@@ -30,7 +30,9 @@ import { L } from '@/utils/translation';
 import projectDarkImage from "@/assets/img/projects/project-dark.png";
 import projectWhiteImage from "@/assets/img/projects/project-white.png";
 import { ref } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
+import 'swiper/css';
 
 const projectImages = ref([
     projectWhiteImage,
@@ -42,4 +44,7 @@ const projectImages = ref([
     projectWhiteImage,
     projectDarkImage,
 ])
+
+
+
 </script>
