@@ -1,8 +1,8 @@
 <template>
     <div
-        class="text-white grid grid-cols-2 justify-center align-cent  border-app-primary-700 border-2 py-16 px-10 rounded-md ">
-        <div :class="{ 'order-2': props.reverse }" class="mx-auto">
-            <img :src="blogImage" alt="blog image">
+        class="text-white grid md:grid-cols-2 sm:grid-cols-1 justify-center align-cent  border-app-primary-700 border-2 py-16 px-10 rounded-md gap-7">
+        <div :class="{ 'order-2': props.reverse }" class="md:mx-auto">
+            <img :src="blogImage" alt="blog image" class="w-full">
         </div>
         <div class="flex items-center justify-center ">
             <div>

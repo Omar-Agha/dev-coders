@@ -1,7 +1,7 @@
 <template>
 
-    <div>
-        <h2 class="text-white font-bold text-7xl text-center">
+    <div class="container mx-auto">
+        <h2 class="section-heading">
             <span class="capitalize">Get to know </span>
             <span class="capitalize text-app-primary-700">U</span>
             <span class="capitalize text-app-secondary-600">S</span>
@@ -9,17 +9,18 @@
 
 
 
-        <p class="text-white text-center w-1/2 mx-auto ">I'm a Frontend Web Developer building the Front-end of Websites
+        <p class="text-white text-center mx-auto  mt-5 mb-5">I'm a Frontend Web Developer building the Front-end of
+            Websites
             and Web Applications that leads to the success of the overall product. Check out some of my work in the
             Projects section.</p>
-        Swiper
 
+        <!--  -->
 
-        <Swiper :slides-per-view="3" :centered-slides="true" :space-between="50" :navigation="true"
-            @slide-change="onSlideChange" >
+        <Swiper :centered-slides="true" :navigation="true" @slide-change="onSlideChange" :slides-per-view="2"
+            :space-between="0"  :breakpoints="swiperBreakpoints">
 
             <SwiperSlide v-for="(imagePath, index) in avatarImagesPath" :key="index" class="">
-                
+
                 <img :src="imagePath" class="w-[90%] transition-all" :class="{
                     'scale-100 grayscale-0': activeIndex === index,
                     'scale-75 grayscale': activeIndex !== index
@@ -53,6 +54,20 @@ import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 
+const swiperBreakpoints = ref({
+    640: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+    },
+    1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+    },
+})
 // const avatarImagesPath = ref([avatar2, avatar3, avatar1, avatar4, avatar5])
 const avatarImagesPath = ref([avatar1, avatar1, avatar1, avatar1, avatar1])
 
