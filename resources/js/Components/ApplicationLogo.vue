@@ -12,6 +12,6 @@ const props = defineProps({
 <template>
     <div class="d-flex items-center">
         <img src="@/assets/img/dev-coders-icon.png" class="w-[75px]">
-        <DevCodersTextIcon :dark="props.dark" />
+        <DevCodersTextIcon :dark="props.dark" class="hidden md:flex" />
     </div>
 </template>

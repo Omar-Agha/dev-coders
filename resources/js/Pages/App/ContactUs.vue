@@ -6,7 +6,7 @@
         <span class="capitalize text-app-secondary-600">S</span>
     </h2>
 
-    <div class="flex flex-col gap-3 w-[50%] m-auto">
+    <div class="flex flex-col gap-3 w-full md:w-[50%] m-auto">
         <div class="p-[2px] ">
             <input type="text" name="name" class="w-full text-white input-transparent-with-border text-center"
                 placeholder="Enter Your Name" />
