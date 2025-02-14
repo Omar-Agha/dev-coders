@@ -10,6 +10,7 @@ import Blogs from './Blogs/Blog.vue';
 import BlogsContainer from './Blogs/BlogsContainer.vue';
 import ContactUs from './ContactUs.vue';
 import Spacer from '@/Components/Spacer.vue';
+import OurServices from './OurServices.vue';
 
 defineProps({
     canLogin: {
@@ -36,10 +37,14 @@ defineProps({
             <AppHeaderNav class="h-[15vh]" />
             <Hero class="min-h-[85vh]" />
             <Spacer />
+            
             <AboutUs />
             <Spacer :size="SpacerSize.X2" />
-            <KnowUs />
 
+            <OurServices />
+            <Spacer :size="SpacerSize.X2" />
+            
+            <KnowUs />
             <Spacer :size="SpacerSize.X2" />
             <OurProject />
             <Spacer :size="SpacerSize.X2" />
