@@ -10,6 +10,7 @@ import { en, ar } from "vuetify/locale";
 import i18n from "./i18n";
 import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
+import VueAnimateOnScroll from 'vue3-animate-onscroll';
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 const savedLocale = localStorage.getItem("locale") || "en";
@@ -32,6 +33,7 @@ createInertiaApp({
         var app = createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(VueAnimateOnScroll)
             .use(vuetify)
             .use(i18n)
             .mount(el);

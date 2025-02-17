@@ -41,7 +41,7 @@ defineProps({
             <AboutUs />
             <Spacer :size="SpacerSize.X2" />
 
-            <OurServices />
+            <OurServices  />
             <Spacer :size="SpacerSize.X2" />
             
             <KnowUs />
@@ -50,7 +50,11 @@ defineProps({
             <Spacer :size="SpacerSize.X2" />
             <BlogsContainer />
             <Spacer :size="SpacerSize.X2" />
-            <ContactUs />
+            <ContactUs  />
+
+
+            
+
             
         </main>
 
