@@ -1,20 +1,57 @@
+<script setup>
+import ComputerSvg from '@/Components/Shapes/ComputerSvg.vue';
+import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
+import LargeSquare from '@/Components/Shapes/LargeSquare.vue';
+import SmallSquare from '@/Components/Shapes/SmallSquare.vue';
+import ColorEnum from '@/enums/ColorEnum';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
+
+
+onMounted(()=>{
+
+    gsap.from(".blur-reveal", {
+        opacity: 0,
+    scale: 1.5,
+    filter: "blur(10px)",
+    duration: 1.5,
+    ease: "power4.out",
+    stagger:0.1
+    });
+
+    gsap.from(".left",{
+        x: "-100%",  // Start off-screen to the left
+    opacity: 0,  // Fade in effect
+    duration: 1.5,
+    ease: "power4.out"
+    })
+    gsap.from(".right",{
+        x: "100%",  // Start off-screen to the left
+    opacity: 0,  // Fade in effect
+    duration: 1.5,
+    ease: "power4.out"
+    })
+})
+
+</script>
+
 <template>
     <!-- grid-cols-3 md:grid-cols-6 -->
     <section class="grid grid-cols-1 lg:grid-cols-3">
-        <div class="flex flex-col items-start justify-center space-y-4 p-8">
-            <h1 class="text-7xl  text-white font-light">
-                Your <span class="text-app-primary-glow font-bold">Vision</span><br>
-                Our <span class="text-app-secondary-glow font-extrabold">Code</span>
+        <div class="flex flex-col items-start justify-center space-y-4 p-8 left">
+            <h1 class="text-7xl  text-white font-light animate blur-reveal">
+                Your <span class="text-app-primary-glow font-bold ">Vision</span><br>
+                Our <span class="text-app-secondary-glow font-extrabold ">Code</span>
             </h1>
-            <p class="text-gray-300 max-w-md">
+            <p class="text-gray-300 max-w-md blur-reveal">
                 Welcome to Our web Site <br class="hidden lg:block" />
                 Let make Some thing Cool.
             </p>
-            <button class="primary-button">
+            <button class="primary-button ">
                 See More
             </button>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-2 right">
             <ComputerSvg />
         </div>
         <div class="hidden md:block">
@@ -32,11 +69,3 @@
 </template>
 
 
-<script setup>
-import ComputerSvg from '@/Components/Shapes/ComputerSvg.vue';
-import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
-import LargeSquare from '@/Components/Shapes/LargeSquare.vue';
-import SmallSquare from '@/Components/Shapes/SmallSquare.vue';
-import ColorEnum from '@/enums/ColorEnum';
-
-</script>
