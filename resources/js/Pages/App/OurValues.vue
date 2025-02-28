@@ -1,0 +1,109 @@
+<template>
+
+<section class="our-values text-white relative">
+    <h2>Our Core Values</h2>
+    <p>At DevCoders, we stand on principles that drive every project we touch. These values shape our code and our culture.</p>
+
+    <div class="grid  grid-cols-4 gap-2 mt-2 z-20">
+        <!-- <div class="glass-card">💡 Innovation <p>We explore new technologies to unlock smarter solutions.</p></div>
+        <div class="glass-card ">🤝 Collaboration <p>Great software is built by great teams.</p></div>
+        <div class="glass-card">⚡ Performance <p>We craft efficient code that performs at scale.</p></div>
+        <div class="glass-card">🚀 Adaptability <p>We embrace change and evolve with technology.</p></div> -->
+
+        <GlassyCard class="z-20"></GlassyCard>
+        <GlassyCard class="z-20"></GlassyCard>
+        <GlassyCard class="z-20"></GlassyCard>
+        <GlassyCard class="z-20"></GlassyCard>
+        
+        
+        
+    </div>
+
+        <div class="">
+
+            <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
+            <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1" :color="ColorEnum.Blue"/>
+            <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
+        </div>
+    
+
+
+</section>
+
+</template>
+<script setup lang="ts">
+
+import GradientLine from '@/Components/GradientLine.vue';
+import GlassyCard from '@/Components/Cards/GlassyCard.vue';
+import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
+import ColorEnum from '@/enums/ColorEnum';
+import { L } from '@/utils/translation';
+import gsap from 'gsap';
+
+gsap.from(".glass-card", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out"
+});
+
+</script>
+
+
+<style scoped>
+.glass-card {
+    /* @apply bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 cursor-default; */
+    /* @apply isolate rounded-xl bg-transparent shadow-lg ring-1 border-red-400 */
+    /* @apply bg-indigo-200 p-3 isolate aspect-video  rounded-xl  shadow-lg ring-1 ring-black/35 backdrop-blur-md */
+    padding: 20px;
+/* From https://css.glass */
+/* From https://css.glass */
+height: 200px;
+background: rgba( 255, 255, 255, 0.16 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.31 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.drop-shadow {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.1)); /* Adjust opacity if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Important because of the `:before` positioning */
+}
+
+.drop-shadow::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 10em;
+    height: calc(100% - 20em);
+    width: calc(100% - 20em);
+    border-top: 2px solid rgba(225, 225, 225, 0.2);
+    border-left: 1px solid rgba(225, 225, 225, 0.1);
+    border-right: 1px solid rgba(225, 225, 225, 0.3);
+    z-index: 2;
+    /* filter: blur(1px); */  /* Uncomment if you actually want the blur */
+}
+
+
+.glass {
+  height: 100%;
+  width: 100%;
+   background-image: url($image);
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  filter: blur(20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

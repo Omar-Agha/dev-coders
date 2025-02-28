@@ -11,6 +11,7 @@ import BlogsContainer from './Blogs/BlogsContainer.vue';
 import ContactUs from './ContactUs.vue';
 import Spacer from '@/Components/Spacer.vue';
 import OurServices from './OurServices.vue';
+import OurValues from './OurValues.vue';
 
 defineProps({
     canLogin: {
@@ -38,7 +39,8 @@ defineProps({
             <Hero class="min-h-[85vh]" />
             <Spacer />
             
-            <AboutUs />
+            <!-- <AboutUs /> -->
+            <OurValues />
             <Spacer :size="SpacerSize.X2" />
 
             <OurServices  />
