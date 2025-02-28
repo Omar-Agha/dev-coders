@@ -17,11 +17,10 @@ const props = defineProps({
         <div class="flex-1"></div>
         <div class="text-start">
 
-            <!-- <h2 class="text-2xl pb-2">🚀 Adaptability</h2> -->
             <h2 class="text-2xl pb-2">
                 <slot name="title" />
             </h2>
-            <p>
+            <p class="pl-0">
                 <slot name="content" />
             </p>
         </div>
@@ -42,23 +41,10 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.glass-card {
-
-
-
-    height: 200px;
-    background: rgba(255, 255, 255, 0.16);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.31);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
-}
-
 .gpt-card {
     /* width: 200px; */
     height: 300px;
+    box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.1);
 
     background: rgba(255, 255, 255, 0.05);
     /* subtle white tint */
@@ -81,7 +67,8 @@ const props = defineProps({
 
 
 .gpt-card:hover {
-    box-shadow: 0 0 30px rgba(164, 116, 255, 0.6);
+    box-shadow: 0 0 30px rgba(164, 116, 255, 0.6),
+        inset 0 0 16px rgba(255, 255, 255, 0.1);
     /* Glowing purple (adjust if needed) */
 
     /* transform: translateY(-10px); */
