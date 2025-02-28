@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
     <!--  -->
 
-    <div class="gpt-card flex flex-col relative p-7"
+    <div class="gpt-card flex flex-col relative p-7 hover:rotate-0"
         :class="{ 'rotate-[5deg]': rotatedToRight, '-rotate-[4deg]': rotatedToLeft, 'translate-y-10': shiftedToDown }">
 
         <div class="flex-1"></div>
@@ -84,7 +84,7 @@ const props = defineProps({
     box-shadow: 0 0 30px rgba(164, 116, 255, 0.6);
     /* Glowing purple (adjust if needed) */
 
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
     z-index: 100;
     /* slight lift */
 }

@@ -23,8 +23,23 @@
                     <HeartIcon />
                 </template>
             </GlassyCard>
-            <GlassyCard class="z-20" rotated-to-left shifted-to-down></GlassyCard>
-            <GlassyCard class="z-20" rotated-to-right></GlassyCard>
+            <GlassyCard class="z-20" rotated-to-left shifted-to-down>
+                <template v-slot:title>Quality First</template>
+                <template v-slot:content>We believe that quality is not negotiable. Every line of code, every design
+                    choice, and every user experience reflects our high standards.</template>
+                <template v-slot:icon>
+                    <CheckCircleIcon />
+                </template>
+            </GlassyCard>
+
+            <GlassyCard class="z-20" rotated-to-right>
+                <template v-slot:title>Innovation & Curiosity</template>
+                <template v-slot:content>We are driven by curiosity — exploring the latest tech, challenging old ways,
+                    and delivering innovative solutions that push boundaries.</template>
+                <template v-slot:icon>
+                    <ZapIcon />
+                </template>
+            </GlassyCard>
 
 
 
@@ -55,6 +70,8 @@ import gsap from 'gsap';
 import SunIcon from '@/assets/icons/SunIcon.vue';
 import TargetIcon from '@/assets/icons/TargetIcon.vue';
 import HeartIcon from '@/assets/icons/HeartIcon.vue';
+import CheckCircleIcon from '@/assets/icons/CheckCircleIcon.vue';
+import ZapIcon from '@/assets/icons/ZapIcon.vue';
 
 
 
