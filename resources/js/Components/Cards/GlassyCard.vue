@@ -1,33 +1,69 @@
 <script lang="ts" setup>
+
+const props = defineProps({
+    rotatedToRight: Boolean,
+    rotatedToLeft: Boolean,
+    shiftedToDown: Boolean,
+
+});
 </script>
 
 <template>
-        <!-- <div class="glass-card">🚀 Adaptability <p>We embrace change and evolve with technology.</p></div> -->
-        <div class="gpt-card">🚀 Adaptability <p>We embrace change and evolve with technology.</p></div>
+    <!--  -->
+
+    <div class="gpt-card flex flex-col relative p-7"
+        :class="{ 'rotate-[5deg]': rotatedToRight, '-rotate-[4deg]': rotatedToLeft, 'translate-y-10': shiftedToDown }">
+
+        <div class="flex-1"></div>
+        <div class="text-start">
+
+            <!-- <h2 class="text-2xl pb-2">🚀 Adaptability</h2> -->
+            <h2 class="text-2xl pb-2">
+                <slot name="title" />
+            </h2>
+            <p>
+                <slot name="content" />
+            </p>
+        </div>
+
+
+        <div class=" absolute right-[-50px] top-[-30px]">
+            <slot name="icon" />
+
+        </div>
+
+
+
+
+    </div>
+
+
 
 </template>
 
 <style scoped>
 .glass-card {
 
-    padding: 20px;
+
 
     height: 200px;
-    background: rgba( 255, 255, 255, 0.16 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.31 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.31);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
 .gpt-card {
     /* width: 200px; */
-    height: 250px;
+    height: 300px;
 
-    background: rgba(255, 255, 255, 0.05); /* subtle white tint */
-    backdrop-filter: blur(15px); /* frosted glass */
+    background: rgba(255, 255, 255, 0.05);
+    /* subtle white tint */
+    backdrop-filter: blur(15px);
+    /* frosted glass */
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -45,9 +81,14 @@
 
 
 .gpt-card:hover {
-    box-shadow: 0 0 30px rgba(164, 116, 255, 0.6); /* Glowing purple (adjust if needed) */
-    transform: translateY(-10px); /* slight lift */
+    box-shadow: 0 0 30px rgba(164, 116, 255, 0.6);
+    /* Glowing purple (adjust if needed) */
+
+    transform: translateY(-10px);
+    z-index: 100;
+    /* slight lift */
 }
+
 .gpt-card::before {
     content: "";
     position: absolute;
