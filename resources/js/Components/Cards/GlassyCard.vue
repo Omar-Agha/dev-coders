@@ -10,9 +10,9 @@ const props = defineProps({
 
 <template>
     <!--  -->
-
+    <!-- :class="{ 'rotate-[5deg]': rotatedToRight, '-rotate-[4deg]': rotatedToLeft, 'translate-y-10': shiftedToDown }" -->
     <div class="gpt-card flex flex-col relative p-7 hover:rotate-0"
-        :class="{ 'rotate-[5deg]': rotatedToRight, '-rotate-[4deg]': rotatedToLeft, 'translate-y-10': shiftedToDown }">
+        :class="{ 'rotate-[2deg] md:rotate-[5deg]': rotatedToRight, '-rotate-[1deg] md:-rotate-[4deg]': rotatedToLeft, 'md:translate-y-10 translate-y-4': shiftedToDown }">
 
         <div class="flex-1"></div>
         <div class="text-start">

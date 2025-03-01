@@ -5,7 +5,8 @@
         <p>At DevCoders, we stand on principles that drive every project we touch. These values shape our code and our
             culture.</p>
 
-        <div class="grid  grid-cols-4 gap-1 mt-2 z-20 py-5">
+        <!-- <div class="grid  grid-cols-4 gap-1 mt-2 z-20 py-5"> -->
+        <div class="grid  grid-cols-1 gap-7 md:grid-cols-2 md:gap-5  lg:grid-cols-4 lg:gap-2  mt-2 z-20 py-5">
 
             <GlassyCard class="z-20" rotated-to-left shifted-to-down>
                 <template v-slot:title>Our Mission </template>
