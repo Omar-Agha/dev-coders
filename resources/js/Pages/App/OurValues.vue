@@ -1,6 +1,6 @@
 <template>
 
-    <section class="our-values text-white relative">
+    <section class="our-values text-white relative  overflow-hidden">
         <h2>Our Core Values</h2>
         <p>At DevCoders, we stand on principles that drive every project we touch. These values shape our code and our
             culture.</p>
@@ -51,7 +51,7 @@
             <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
             <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1"
                 :color="ColorEnum.Blue" />
-            <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
+            <!-- <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" /> -->
         </div>
 
 
