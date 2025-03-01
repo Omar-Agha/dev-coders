@@ -44,7 +44,8 @@ const props = defineProps({
 .gpt-card {
     /* width: 200px; */
     height: 300px;
-    box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 16px rgba(255, 255, 255, 0.1);
 
     background: rgba(255, 255, 255, 0.05);
     /* subtle white tint */
@@ -53,10 +54,7 @@ const props = defineProps({
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+
     text-align: center;
     color: white;
     transition: all 0.3s ease;

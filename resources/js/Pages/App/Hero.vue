@@ -8,28 +8,28 @@ import gsap from 'gsap';
 import { onMounted } from 'vue';
 
 
-onMounted(()=>{
+onMounted(() => {
 
     gsap.from(".blur-reveal", {
         opacity: 0,
-    scale: 1.5,
-    filter: "blur(10px)",
-    duration: 1.5,
-    ease: "power4.out",
-    stagger:0.1
+        scale: 1.5,
+        filter: "blur(10px)",
+        duration: 1.5,
+        ease: "power4.out",
+        stagger: 0.1
     });
 
-    gsap.from(".left",{
+    gsap.from(".left", {
         x: "-100%",  // Start off-screen to the left
-    opacity: 0,  // Fade in effect
-    duration: 1.5,
-    ease: "power4.out"
+        opacity: 0,  // Fade in effect
+        duration: 1.5,
+        ease: "power4.out"
     })
-    gsap.from(".right",{
+    gsap.from(".right", {
         x: "100%",  // Start off-screen to the left
-    opacity: 0,  // Fade in effect
-    duration: 1.5,
-    ease: "power4.out"
+        opacity: 0,  // Fade in effect
+        duration: 1.5,
+        ease: "power4.out"
     })
 })
 
@@ -38,7 +38,7 @@ onMounted(()=>{
 <template>
     <!-- grid-cols-3 md:grid-cols-6 -->
     <section class="grid grid-cols-1 lg:grid-cols-3">
-        <div class="flex flex-col items-start justify-center space-y-4 p-8 left">
+        <div class="flex flex-col items-start justify-center space-y-4 p-8 left z-20">
             <h1 class="text-7xl  text-white font-light animate blur-reveal">
                 Your <span class="text-app-primary-glow font-bold ">Vision</span><br>
                 Our <span class="text-app-secondary-glow font-extrabold ">Code</span>
@@ -51,7 +51,7 @@ onMounted(()=>{
                 See More
             </button>
         </div>
-        <div class="col-span-2 right">
+        <div class="col-span-2 right z-20">
             <ComputerSvg />
         </div>
         <div class="hidden md:block">
@@ -67,5 +67,3 @@ onMounted(()=>{
     </section>
 
 </template>
-
-
