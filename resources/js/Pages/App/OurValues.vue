@@ -1,9 +1,10 @@
 <template>
 
-    <section class="our-values text-white relative  overflow-hidden">
+    <section class="our-values text-white relative  ">
         <h2>Our Core Values</h2>
         <p>At DevCoders, we stand on principles that drive every project we touch. These values shape our code and our
             culture.</p>
+
 
         <!-- <div class="grid  grid-cols-4 gap-1 mt-2 z-20 py-5"> -->
         <div class="grid  grid-cols-1 gap-7 md:grid-cols-2 md:gap-5  lg:grid-cols-4 lg:gap-2  mt-2 z-20 py-5">
@@ -51,7 +52,7 @@
             <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
             <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1"
                 :color="ColorEnum.Blue" />
-            <!-- <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" /> -->
+            <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
         </div>
 
 

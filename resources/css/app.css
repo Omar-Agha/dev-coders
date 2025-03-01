@@ -5,6 +5,7 @@
 [x-cloak] {
     display: none;
 }
+
 input:focus {
     box-shadow: none !important;
 }
@@ -15,13 +16,16 @@ input:focus {
 
 @layer base {
     body {
-        @apply font-ev bg-app-primary-dark pb-28;
+        @apply font-ev bg-app-primary-dark pb-28 overflow-x-clip;
+        ;
     }
 }
+
 @layer components {
-    .section-heading{
+    .section-heading {
         @apply text-white font-bold text-6xl md:text-7xl text-center;
     }
+
     .primary-button {
         @apply bg-gradient-to-t from-app-secondary-700 to-app-primary-700 text-white px-6 py-2 rounded-lg hover:scale-105 transition;
     }
