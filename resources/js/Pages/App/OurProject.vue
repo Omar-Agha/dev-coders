@@ -9,6 +9,7 @@ import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 import 'swiper/css';
+import { VBtn, VIcon } from 'vuetify/lib/components/index.mjs';
 
 const projectImages = ref([
     projectWhiteImage,
@@ -53,10 +54,40 @@ const projectImages = ref([
 
                 <!-- Text Content -->
                 <div
-                    class="absolute bottom-0 left-0 w-full p-4 text-white transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                    <h3 class="text-lg font-semibold">Project Name</h3>
-                    <p class="text-sm opacity-80">Short project description here...</p>
+                    class=" h-[100%] absolute bottom-0 left-0 w-full p-4 text-white transition-transform duration-300 translate-y-full group-hover:translate-y-0 flex flex-col justify-between">
+                    <div class="" style="flex-basis: 2;">
+
+                        <h3 class="text-lg font-semibold">Project Name</h3>
+                        <p class="text-sm opacity-80">Short project description here...</p>
+                    </div>
+
+                    <div class="flex gap-4 mt-2 " style="flex-basis: 1;">
+                        <a href="#" class="text-gray-300  hover:text-app-primary-glow transition">
+
+                            <VIcon icon="mdi-web" size="small" class="bg-transparent " />
+
+                        </a>
+
+                        <a href="#" class="text-gray-300  hover:text-app-primary-glow transition">
+
+                            <VIcon icon="mdi-github" size="small" />
+                        </a>
+
+                        <a href="#" class="text-gray-300  hover:text-app-primary-glow transition">
+
+                            <VIcon icon="mdi-google-play" size="small" class="bg-transparent " />
+
+                        </a>
+                        <a href="#" class="text-gray-300  hover:text-app-primary-glow transition">
+
+                            <VIcon icon="mdi-apple" size="small" class="bg-transparent " />
+
+                        </a>
+                    </div>
                 </div>
+
+
+
             </div>
 
             <!-- <div class="overlay group-hover:translate-y-0"></div> -->
