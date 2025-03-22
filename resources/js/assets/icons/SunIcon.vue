@@ -1,6 +1,6 @@
 <template>
 
-    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="250" height="250" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M80 113.333C98.4095 113.333 113.333 98.4095 113.333 80C113.333 61.5905 98.4095 46.6667 80 46.6667C61.5905 46.6667 46.6667 61.5905 46.6667 80C46.6667 98.4095 61.5905 113.333 80 113.333Z"
             stroke="#FFF7F7" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />

@@ -26,7 +26,7 @@ const props = defineProps({
         </div>
 
 
-        <div class=" absolute right-[-50px] top-[-30px]">
+        <div class=" absolute right-[-80px] top-[-50px]">
             <slot name="icon" />
 
         </div>

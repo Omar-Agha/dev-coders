@@ -38,26 +38,19 @@ defineProps({
             <AppHeaderNav class="h-[15vh]" />
             <Hero class="min-h-[85vh]" />
             <Spacer />
-            
-            <!-- <AboutUs /> -->
             <OurValues />
             <Spacer :size="SpacerSize.X2" />
 
-            <OurServices  />
+            <OurServices />
             <Spacer :size="SpacerSize.X2" />
-            
-            <KnowUs />
-            <Spacer :size="SpacerSize.X2" />
+
+            <!-- <KnowUs />
+            <Spacer :size="SpacerSize.X2" /> -->
             <OurProject />
             <Spacer :size="SpacerSize.X2" />
             <BlogsContainer />
             <Spacer :size="SpacerSize.X2" />
-            <ContactUs  />
-
-
-            
-
-            
+            <ContactUs />
         </main>
 
 
