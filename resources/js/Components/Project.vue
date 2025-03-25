@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
 
     <div
-        class=" group relative w-80 h-52 rounded-2xl overflow-hidden bg-black/30 backdrop-blur-md transition-transform duration-300 hover:scale-105 ">
+        class=" group relative w-96 h-52 rounded-2xl overflow-hidden bg-black/30 backdrop-blur-md transition-transform duration-300 hover:scale-105 ">
         <!-- Background Image -->
         <img :src="props.image"
             class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:brightness-110 group-hover:scale-110" />
@@ -30,12 +30,12 @@ const props = defineProps({
             <div class="" style="flex-basis: 2;">
 
                 <h3 class="text-lg font-semibold">{{ props.projectName }}</h3>
-                <p class="text-sm opacity-80 line-clamp-2">{{ props.projectDescription }}</p>
-                <div
+                <p class="text-sm opacity-80 ">{{ props.projectDescription }}</p>
+                <!-- <div
                     class="w-[75px] h-[75px] cursor-pointer absolute left-[50%] top-[60%] -translate-x-1/2 -translate-y-1/2">
 
                     <ViewMore />
-                </div>
+                </div> -->
             </div>
 
             <div class="flex gap-4 mt-2 " style="flex-basis: 1;">

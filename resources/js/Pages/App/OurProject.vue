@@ -45,7 +45,32 @@ const projects = [{
     ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
     SiteUrl: "breelando.xyz",
     Image: brelando,
-}]
+},
+{
+    ProjectName: "Breelando",
+    ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
+    SiteUrl: "breelando.xyz",
+    Image: brelando,
+},
+{
+    ProjectName: "Breelando",
+    ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
+    SiteUrl: "breelando.xyz",
+    Image: brelando,
+},
+{
+    ProjectName: "Breelando",
+    ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
+    SiteUrl: "breelando.xyz",
+    Image: brelando,
+},
+{
+    ProjectName: "Breelando",
+    ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
+    SiteUrl: "breelando.xyz",
+    Image: brelando,
+}
+]
 
 
 </script>
@@ -59,58 +84,16 @@ const projects = [{
         </h2>
 
 
-        <div class="flex justify-start gap-5 mt-3">
-
-            <div v-for="project in projects">
-                <!-- <img :src="imagePath" class="w-[90%]"> -->
+        <div class="flex justify-start gap-5 mt-3 overflow-x-scroll flex-nowrap md:grid md:grid-cols-3 ">
+            <div v-for="project in projects" class="rounded-2xl">
                 <Project :app-store-url="project.appStoreUrl" :image="project.Image" :project-name="project.ProjectName"
                     :project-description="project.ProjectDescription"></Project>
+
             </div>
-
-
-
-
-            <!-- <div class="overlay group-hover:translate-y-0"></div> -->
-
-
-
-
-
         </div>
-
-
-        <button class="text-red-500 bg-black" @click="openModal">open it </button>
-
-        <!-- <Modal :show="show" :max-width="maxWidth" :closeable="closeable" @close="onModalClosed">
-            
-        </Modal> -->
-
-
-        <VBtn color="surface-variant" class="bg-black" text="Open Dialog" variant="flat"></VBtn>
-
-
-
-
     </div>
 
 
-    <VDialog max-width="500" v-model="show">
-
-        <!-- <template v-slot:default="{ isActive }"> -->
-        <VCard title="Dialog">
-            <VCardText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
-            </VCardText>
-
-            <VCardActions>
-                <VSpacer></VSpacer>
-
-                <VBtn text="Close Dialog" @click="show = false"></VBtn>
-            </VCardActions>
-        </VCard>
-        <!-- </template> -->
-    </VDialog>
 
 </template>
 
