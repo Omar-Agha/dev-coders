@@ -84,7 +84,8 @@ const projects = [{
         </h2>
 
 
-        <div class="flex justify-start gap-5 mt-3 overflow-x-scroll flex-nowrap md:grid md:grid-cols-3 ">
+        <div
+            class="flex justify-start gap-5 mt-3 overflow-x-scroll md:overflow-hidden flex-nowrap md:grid md:grid-cols-3 ">
             <div v-for="project in projects" class="rounded-2xl">
                 <Project :app-store-url="project.appStoreUrl" :image="project.Image" :project-name="project.ProjectName"
                     :project-description="project.ProjectDescription"></Project>
