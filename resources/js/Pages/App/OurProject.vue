@@ -7,31 +7,12 @@ import samaArt from "@/assets/img/projects/sama-art.png";
 import brelando from "@/assets/img/projects/brelando.png";
 import 'swiper/css';
 
-import { ref } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import { VBtn, VCard, VCardActions, VCardText, VDialog, VIcon, VSpacer } from 'vuetify/lib/components/index.mjs';
 import Project from '@/Components/Project.vue';
-import Modal from '@/Components/Modal.vue';
+import gsap from 'gsap';
+import { onMounted } from 'vue';
 
 
-const maxWidth = "lg"
-const closeable = false
-const show = ref(false)
-const btn = ref(null)
-
-const onModalClosed = () => {
-    console.log('closed');
-
-}
-
-const openModal = () => {
-    show.value = true;
-}
-const closeDialog = () => {
-    show.value = false;
-
-};
 
 
 const projects = [{
@@ -72,7 +53,19 @@ const projects = [{
 }
 ]
 
+onMounted(() => {
 
+    gsap.from('.projects-container .project', {
+
+        opacity: 0,
+        stagger: 0.3,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".projects-container",
+            start: "top 80%"
+        }
+    });
+})
 </script>
 
 <template>
@@ -85,10 +78,10 @@ const projects = [{
 
 
         <div
-            class="flex justify-start gap-5 mt-3 overflow-x-scroll md:overflow-hidden flex-nowrap md:grid md:grid-cols-3  overflow-y-hidden">
+            class="projects-container flex justify-start gap-5 mt-3 overflow-x-scroll md:overflow-hidden flex-nowrap md:grid md:grid-cols-3  overflow-y-hidden">
             <div v-for="project in projects" class="rounded-2xl">
                 <Project :app-store-url="project.appStoreUrl" :image="project.Image" :project-name="project.ProjectName"
-                    :project-description="project.ProjectDescription"></Project>
+                    :project-description="project.ProjectDescription" class="project"></Project>
 
             </div>
         </div>
