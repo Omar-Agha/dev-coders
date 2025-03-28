@@ -1,9 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import ComputerSvg from '@/Components/Shapes/ComputerSvg.vue';
 import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
 import LargeSquare from '@/Components/Shapes/LargeSquare.vue';
 import SmallSquare from '@/Components/Shapes/SmallSquare.vue';
 import ColorEnum from '@/enums/ColorEnum';
+import { scrollToSection } from '@/utils/pageUtils';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
@@ -33,6 +34,7 @@ onMounted(() => {
     })
 })
 
+
 </script>
 
 <template>
@@ -47,8 +49,8 @@ onMounted(() => {
                 Welcome to Our web Site <br class="hidden lg:block" />
                 Let make Some thing Cool.
             </p>
-            <button class="primary-button ">
-                See More
+            <button class="primary-button" @click="scrollToSection('contact-us-section')">
+                Start Your Project
             </button>
         </div>
         <div class="col-span-2 right z-20">
@@ -58,12 +60,12 @@ onMounted(() => {
         <div class="">
             <LargeSquare class="absolute left-[10%] top-[10%] animate-float-reverse" />
             <SmallSquare class="absolute left-[30%] top-[20%] animate-float " />
-            <GlowingCircle class="absolute left-[-200px] top-[-60px] animate-float " opacity="0.15" />
-            <GlowingCircle class="absolute left-[25%] top-[30%] animate-float-reverse" opacity="0.09" />
-            <GlowingCircle class="absolute left-[35%] top-[-370px]  " opacity="0.1" />
+            <GlowingCircle class="absolute left-[-200px] top-[-60px] animate-float " :opacity="0.15" />
+            <GlowingCircle class="absolute left-[25%] top-[30%] animate-float-reverse" :opacity="0.09" />
+            <GlowingCircle class="absolute left-[35%] top-[-370px]" :opacity="0.1" />
 
-            <GlowingCircle class="absolute right-[-150px] top-[100px]  " opacity="0.12" />
-            <GlowingCircle class="absolute right-[-200px] top-[-300px] " opacity="0.4" :color="ColorEnum.Blue" />
+            <GlowingCircle class="absolute right-[-150px] top-[100px]" :opacity="0.12" />
+            <GlowingCircle class="absolute right-[-200px] top-[-300px]" :opacity="0.4" :color="ColorEnum.Blue" />
 
         </div>
     </section>

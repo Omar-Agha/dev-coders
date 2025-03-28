@@ -34,20 +34,23 @@ defineProps({
 
 <template>
     <div class="bg-app-primary-dark min-h-screen">
-        <main class="container mx-auto">
+        <main class=" ">
             <AppHeaderNav class="h-[15vh]" />
-            <Hero class="min-h-[85vh]" />
-            <Spacer />
-            <OurValues />
-            <Spacer :size="SpacerSize.X2" />
+            <div class="container mx-auto">
 
-            <OurServices />
-            <Spacer :size="SpacerSize.X2" />
-            <OurProject />
-            <Spacer :size="SpacerSize.X2" />
-            <BlogsContainer />
-            <Spacer :size="SpacerSize.X2" />
-            <ContactUs />
+                <Hero class="min-h-[85vh]" id="hero-section" />
+                <Spacer />
+                <OurValues />
+                <Spacer :size="SpacerSize.X2" />
+
+                <OurServices id="our-services-section" />
+                <Spacer :size="SpacerSize.X2" />
+                <OurProject id="our-projects-section" />
+                <Spacer :size="SpacerSize.X2" />
+                <BlogsContainer />
+                <Spacer :size="SpacerSize.X2" />
+                <ContactUs id="contact-us-section" />
+            </div>
         </main>
 
 
