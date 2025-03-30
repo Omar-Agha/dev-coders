@@ -46,8 +46,8 @@ onMounted(() => {
                 Our <span class="text-app-secondary-glow font-extrabold ">Code</span>
             </h1>
             <p class="text-gray-300 max-w-md blur-reveal">
-                Welcome to Our web Site <br class="hidden lg:block" />
-                Let make Some thing Cool.
+                Welcome to a world where ideas become reality. <br class="hidden lg:block" />
+                Ready to bring yours to life?
             </p>
             <button class="primary-button" @click="scrollToSection('contact-us-section')">
                 Start Your Project

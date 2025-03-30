@@ -1,16 +1,19 @@
 <template>
 
     <div class="container mx-auto ">
-        <h2 class="section-heading mb-4">
+        <!-- <h2 class="section-heading mb-4">
             <span class="capitalize">Our Services</span>
-            <!-- <span class="capitalize text-app-primary-700">U</span>
-            <span class="capitalize text-app-secondary-600">S</span> -->
+        </h2> -->
+
+        <h2 class="text-white font-bold text-7xl text-center mb">
+            <span class="capitalize text-app-primary-700">Our</span>
+            <span class="capitalize text-app-secondary-600">Services</span>
         </h2>
 
-        <!-- <h2 class="text-white">Some Main Topic</h2> -->
 
-        <p class="text-white text-center mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            aspernatur reiciendis incidunt? Accusamus molestiae ullam tempora laboriosam animi tempore veritatis!</p>
+
+        <p class="text-white text-center mb-2">From concept to deployment, we provide top-tier development services to
+            bring your ideas to life. Explore what we can do for you!</p>
 
         <div class="ServicesContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-11 gap-y-6">
             <Service v-for="(service, index) in services" :key="index" class="service-item gg" :icon="service.icon"
@@ -36,12 +39,12 @@ import gsap from 'gsap';
 import { onMounted } from 'vue';
 
 const services = [
-    { icon: "mdi-code-tags", title: "Dev & Coding", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { icon: "mdi-pencil-ruler", title: "Analysis", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { icon: "mdi-palette", title: "Design", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { icon: "mdi-cloud-cog-outline", title: "Cloud Services", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { icon: "mdi-cloud-cog-outline", title: "Cloud Services", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { icon: "mdi-cloud-cog-outline", title: "Cloud Services", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
+    { icon: "mdi-code-braces", title: "Web Development", content: "Custom-built websites and web apps with modern technologies to fit your needs." },
+    { icon: "mdi-cellphone-check", title: "Mobile App Development", content: "From idea to app store – we build high-performance iOS & Android apps." },
+    { icon: "mdi-palette-outline", title: "UI/UX Design", content: "User-friendly and visually stunning designs to enhance user experience." },
+    { icon: "mdi-cloud-cog-outline", title: "DevOps & Cloud Solutions", content: "Efficient cloud solutions and CI/CD automation for seamless deployments." },
+    { icon: "mdi-test-tube", title: "Software Testing & QA", content: "We ensure your software is secure, reliable, and bug-free with automated & manual testing, performance optimization, and security audits." },
+    { icon: "mdi-chart-bar", title: "Business & System Analysis", content: "Transform your ideas into scalable solutions by analyzing business needs, optimizing workflows, and identifying key growth opportunities." },
 ];
 
 gsap.registerPlugin(ScrollTrigger)
@@ -57,25 +60,6 @@ onMounted(() => {
             start: "top 80%"
         }
     });
-
-    // gsap.utils.toArray(".service-item").forEach((card) => {
-    //     card.addEventListener("mousemove", (e) => {
-    //         const { width, height, left, top } = card.getBoundingClientRect();
-    //         const x = (e.clientX - left - width / 2) / width * 20;
-    //         const y = (e.clientY - top - height / 2) / height * 20;
-
-    //         gsap.to(card, {
-    //             rotateX: y,
-    //             rotateY: x,
-    //             duration: 0.3,
-    //             ease: "power1.out",
-    //         });
-    //     });
-
-    //     card.addEventListener("mouseleave", () => {
-    //         gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.5 });
-    //     });
-    // });
 
 
     //magnetic effect
@@ -99,21 +83,7 @@ onMounted(() => {
         });
     });
 
-    // gsap.utils.toArray(".service-item").forEach((card) => {
-    //     card.addEventListener("mouseenter", () => {
-    //         gsap.to(card, {
-    //             rotateX: gsap.utils.random(-10, 10),
-    //             rotateY: gsap.utils.random(-10, 10),
-    //             scale: 1.05,
-    //             duration: 0.3,
-    //             ease: "power2.out"
-    //         });
-    //     });
 
-    //     card.addEventListener("mouseleave", () => {
-    //         gsap.to(card, { rotateX: 0, rotateY: 0, scale: 1, duration: 0.5 });
-    //     });
-    // });
 })
 
 

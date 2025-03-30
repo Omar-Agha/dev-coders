@@ -1,8 +1,13 @@
 <template>
 
     <section class="our-values text-white relative  ">
-        <h2>Our Core Values</h2>
-        <p>At DevCoders, we stand on principles that drive every project we touch. These values shape our code and our
+        <h2 class="text-white font-bold text-7xl text-center mb">
+            <!-- <span class="capitalize">Our </span> -->
+            <span class="capitalize text-app-secondary-600">Our</span>
+            <span class="capitalize text-app-primary-700">Values</span>
+        </h2>
+        <p class="text-center">At DevCoders, we stand on principles that drive every project we touch. These values
+            shape our code and our
             culture.</p>
 
 

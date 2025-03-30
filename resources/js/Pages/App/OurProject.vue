@@ -71,9 +71,10 @@ onMounted(() => {
 <template>
 
     <div>
-        <h2 class="text-white font-bold text-7xl text-center">
-            <span class="capitalize">Our Project</span>
 
+        <h2 class="text-white font-bold text-7xl text-center mb">
+            <span class="capitalize text-app-primary-700">Our</span>
+            <span class="capitalize text-app-secondary-600">Project</span>
         </h2>
 
 
