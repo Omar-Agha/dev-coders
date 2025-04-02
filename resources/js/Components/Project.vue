@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ViewMore from '@/assets/icons/ViewMore.vue';
 import { VIcon } from 'vuetify/lib/components/index.mjs';
 
@@ -39,23 +39,27 @@ const props = defineProps({
             </div>
 
             <div class="flex gap-4 mt-2 " style="flex-basis: 1;">
-                <a :href="props.SiteUrl" class="text-gray-300  hover:text-app-primary-glow transition">
+                <a :href="props.siteUrl" class="text-gray-300  hover:text-app-primary-glow transition"
+                    v-if="props.siteUrl">
 
                     <VIcon icon="mdi-web" size="small" class="bg-transparent cursor-pointer" />
 
                 </a>
 
-                <a :href="props.GithubUrl" class="text-gray-300  hover:text-app-primary-glow transition">
+                <a :href="props.githubUrl" class="text-gray-300  hover:text-app-primary-glow transition"
+                    v-if="props.githubUrl">
 
                     <VIcon icon="mdi-github" size="small" class="cursor-pointer" />
                 </a>
 
-                <a :href="props.GooglePlayUrl" class="text-gray-300  hover:text-app-primary-glow transition">
+                <a :href="props.googlePlayUrl" class="text-gray-300  hover:text-app-primary-glow transition"
+                    v-if="props.googlePlayUrl">
 
                     <VIcon icon="mdi-google-play" size="small" class="bg-transparent cursor-pointer" />
 
                 </a>
-                <a :href="props.AppStoreUrl" class="text-gray-300  hover:text-app-primary-glow transition">
+                <a :href="props.appStoreUrl" class="text-gray-300  hover:text-app-primary-glow transition"
+                    v-if="props.appStoreUrl">
 
                     <VIcon icon="mdi-apple" size="small" class="bg-transparent cursor-pointer" />
 
