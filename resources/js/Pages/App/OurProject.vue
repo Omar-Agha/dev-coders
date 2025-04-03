@@ -6,6 +6,7 @@ import projectWhiteImage from "@/assets/img/projects/project-white.png";
 import samaArtPoster from "@/assets/img/projects/sama-art.png";
 import brelandoPoster from "@/assets/img/projects/brelando.png";
 import educarPoster from "@/assets/img/projects/educar.png";
+import ChatZonePoster from "@/assets/img/projects/chat-zone.png";
 
 import 'swiper/css';
 
@@ -39,6 +40,16 @@ const projects = [
         ProjectName: "Educar",
         ProjectDescription: "Educar is mobile app that helps to manage car training lessons & courses, by scheduling and reserving practical lesson for students",
         Image: educarPoster,
+        SiteUrl: "",
+        googlPlayUrl: "",
+        appStoreUrl: "",
+        githubUrl: ""
+
+    },
+    {
+        ProjectName: "ChatZone",
+        ProjectDescription: "Chat Zone is an ios/android application that connects users with each other, this app supports realtime communication with live stream and realtime chat  ",
+        Image: ChatZonePoster,
         SiteUrl: "",
         googlPlayUrl: "",
         appStoreUrl: "",
