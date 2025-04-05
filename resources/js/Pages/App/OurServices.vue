@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container mx-auto ">
+    <div class="container mx-auto relative">
         <!-- <h2 class="section-heading mb-4">
             <span class="capitalize">Our Services</span>
         </h2> -->
@@ -16,7 +16,7 @@
             bring your ideas to life. Explore what we can do for you!</p>
 
         <div class="ServicesContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-11 gap-y-6">
-            <Service v-for="(service, index) in services" :key="index" class="service-item gg" :icon="service.icon"
+            <Service v-for="(service, index) in services" :key="index" class="service-item" :icon="service.icon"
                 :title="service.title" :content="service.content"></Service>
 
 
@@ -26,17 +26,27 @@
         <GradientLine class="mx-auto w-[30%] mt-8" />
 
 
+        <div class="">
+
+            <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
+            <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1"
+                :color="ColorEnum.Blue" />
+            <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
+        </div>
+
 
     </div>
 
 </template>
-<script setup>
+<script setup lang="ts">
 import GradientLine from '@/Components/GradientLine.vue';
 import { L } from '@/utils/translation';
 import Service from './Services/Service.vue';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
 import { onMounted } from 'vue';
+import ColorEnum from '@/enums/ColorEnum';
+import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
 
 const services = [
     { icon: "mdi-code-braces", title: "Web Development", content: "Custom-built websites and web apps with modern technologies to fit your needs." },
@@ -63,7 +73,7 @@ onMounted(() => {
 
 
     //magnetic effect
-    gsap.utils.toArray(".service-item").forEach((card) => {
+    gsap.utils.toArray<HTMLElement>(".service-item").forEach((card) => {
         card.addEventListener("mousemove", (e) => {
             const { width, height, left, top } = card.getBoundingClientRect();
             const x = (e.clientX - left - width / 2) / width * 10;

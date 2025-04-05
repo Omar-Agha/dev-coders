@@ -14,6 +14,8 @@ import 'swiper/css';
 import Project from '@/Components/Project.vue';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
+import ColorEnum from '@/enums/ColorEnum';
+import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
 
 
 
@@ -76,7 +78,7 @@ onMounted(() => {
 
 <template>
 
-    <div>
+    <div class="relative">
 
         <h2 class="text-white font-bold text-7xl text-center mb">
             <span class="capitalize text-app-primary-700">Our</span>
@@ -92,6 +94,14 @@ onMounted(() => {
                     :project-description="project.ProjectDescription" class="project" :github-url="project.githubUrl" />
 
             </div>
+        </div>
+
+        <div class="">
+
+            <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
+            <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1"
+                :color="ColorEnum.Blue" />
+            <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
         </div>
     </div>
 

@@ -32,3 +32,12 @@ input:focus {
 
     /* ... */
 }
+
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-app-secondary-glow to-app-primary-700;
+}
+
+.gradient-text2 {
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-app-primary-glow to-app-secondary-glow;
+}

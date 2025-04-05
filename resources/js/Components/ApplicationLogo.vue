@@ -12,7 +12,7 @@ const props = defineProps({
 
 
 const appLogo = ref<HTMLElement | null>(null);
-const intervalTime = 5; // Change this value to set the interval in seconds
+const intervalTime = 4; // Change this value to set the interval in seconds
 
 onMounted(() => {
     const logo_rotate_class = "rotate-icon"
@@ -33,7 +33,7 @@ onMounted(() => {
     <div class="d-flex items-center group">
         <img ref="appLogo" src="@/assets/img/dev-coders-icon.png"
             class="w-[50px] group-hover:rotate-180 duration-500 transition-all">
-        <DevCodersTextIcon :dark="props.dark" class="hidden md:flex " />
+        <DevCodersTextIcon :dark="props.dark" class="" />
     </div>
 </template>
 
