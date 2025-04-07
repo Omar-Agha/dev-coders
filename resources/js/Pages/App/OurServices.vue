@@ -1,22 +1,21 @@
 <template>
 
     <div class="container mx-auto relative">
-        <!-- <h2 class="section-heading mb-4">
-            <span class="capitalize">Our Services</span>
-        </h2> -->
 
-        <h2 class="text-white font-bold text-7xl text-center mb">
-            <span class="capitalize text-app-primary-700">Our</span>
-            <span class="capitalize text-app-secondary-600">Services</span>
+
+        <h2 class="text-white font-bold text-7xl text-center mb ">
+            <span class="capitalize text-app-primary-700 z-20">Our</span>
+            <span class="capitalize text-app-secondary-600 z-20">Services</span>
         </h2>
 
 
 
-        <p class="text-white text-center mb-2">From concept to deployment, we provide top-tier development services to
+        <p class="text-white text-center mb-2 z-20">From concept to deployment, we provide top-tier development services
+            to
             bring your ideas to life. Explore what we can do for you!</p>
 
-        <div class="ServicesContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-11 gap-y-6">
-            <Service v-for="(service, index) in services" :key="index" class="service-item" :icon="service.icon"
+        <div class="ServicesContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-11 gap-y-6 z-20">
+            <Service v-for="(service, index) in services" :key="index" class="service-item z-20" :icon="service.icon"
                 :title="service.title" :content="service.content"></Service>
 
 

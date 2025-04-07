@@ -90,8 +90,9 @@ onMounted(() => {
             class="projects-container flex justify-start gap-5 mt-3 overflow-x-scroll md:overflow-hidden flex-nowrap md:grid md:grid-cols-3  overflow-y-hidden">
             <div v-for="project in projects" class="rounded-2xl">
                 <Project :app-store-url="project.appStoreUrl" :google-play-url="project.googlPlayUrl"
-                    :image="project.Image" :project-name="project.ProjectName"
-                    :project-description="project.ProjectDescription" class="project" :github-url="project.githubUrl" />
+                    :image="project.Image" :project-name="project.ProjectName" cla
+                    :project-description="project.ProjectDescription" class="project z-20"
+                    :github-url="project.githubUrl" />
 
             </div>
         </div>
