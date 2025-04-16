@@ -79,5 +79,12 @@
     "OurProjects2": "Projects",
     "BreelandoProjectDescription": "Brelando is a mobile project designed to share content with users. The app supports real-time messaging, Firebase integration, video processing, and many other features.",
     "EducarProjectDescription": "Educar is a mobile app designed to streamline the management of car training courses. It allows students to easily schedule and reserve their practical driving lessons.",
-    "ChatZoneProjectDescription": "Chat Zone is an iOS/Android application that connects users in real time. It supports live streaming and instant messaging for seamless, interactive communication."
+    "ChatZoneProjectDescription": "Chat Zone is an iOS/Android application that connects users in real time. It supports live streaming and instant messaging for seamless, interactive communication.",
+    "OurProcessTitle": "Our Process:",
+    "FromIdeaToLaunch": "From Idea to Launch",
+    "VisionToSoftware": "Wondering how your {vision} turns into working software?",
+    "Step1": "understanding your goals",
+    "Step2": "followed by clean design",
+    "Step3": "development, testing, and final launch",
+    "Closing": "Discover how we bring ideas to life."
 }

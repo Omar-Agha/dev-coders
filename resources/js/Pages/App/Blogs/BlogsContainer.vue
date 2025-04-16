@@ -1,10 +1,10 @@
 <template>
     <div class="relative">
         <Blog :image="blog1.image" class="z-20">
-            <template v-slot:title>
+            <!-- <template v-slot:title>
                 Our Process: <span class="gradient-text z-20">From Idea to Launch</span>
             </template>
-            <template v-slot:description>
+<template v-slot:description>
                 <p class="z-20">
 
                     Wondering how your <span class="text-app-primary-glow">vision</span> turns into working
@@ -16,6 +16,41 @@
                     <span class="gradient-text2">development, testing, and
                         final launch</span> — all with
                     constant collaboration. Discover how we bring ideas to life.
+                </p>
+            </template> -->
+
+            <!-- <template v-slot:title>
+                خطواتنا: <span class="gradient-text z-20">من الفكرة إلى الإطلاق</span>
+            </template>
+            <template v-slot:description>
+                <p class="z-20">
+                    هل تتساءل كيف تتحول <span class="text-app-primary-glow">رؤيتك</span> إلى برنامج يعمل بكفاءة؟<br />
+                    نحن نتبع عملية مدروسة تبدأ بـ
+                    <span class="text-app-secondary-600">فهم أهدافك</span>، تليها
+                    <span class="text-app-primary-glow">تصاميم نظيفة</span>،
+                    ثم <span class="gradient-text2">التطوير، الاختبار، والإطلاق النهائي</span> —
+                    وكل ذلك بالتعاون المستمر.<br />
+                    اكتشف كيف نحول الأفكار إلى واقع.
+                </p>
+            </template> -->
+
+            <template v-slot:title>
+                {{ $t('OurProcessTitle') }}
+                <span class="gradient-text z-20">{{ $t('FromIdeaToLaunch') }}</span>
+            </template>
+
+            <template v-slot:description>
+                <p class="z-20">
+                    <span
+                        v-html="$t('VisionToSoftware', { vision: `<span class='text-app-primary-glow'>${$t('Vision')}</span>` })">
+                    </span>
+
+                    <br />
+                    {{ $t('WeFollow') }}
+                    <span class="text-app-secondary-600">{{ $t('Step1') }}</span>،
+                    <span class="text-app-primary-glow">{{ $t('Step2') }}</span>،
+                    <span class="gradient-text2">{{ $t('Step3') }}</span> —
+                    {{ $t('Closing') }}
                 </p>
             </template>
         </Blog>
