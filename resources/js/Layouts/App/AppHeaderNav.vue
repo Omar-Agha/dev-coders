@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import { ChangeAppLanguageUseCase, GetAppLanguage } from '@/UseCases/AppLocalizatoinUsecase';
 import { scrollToSection } from '@/utils/pageUtils';
+import { L } from '@/utils/translation';
+import { translate } from '@/utils/translation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { onMounted, ref, Transition } from 'vue';
@@ -45,10 +48,24 @@ onMounted(() => {
 </script>
 
 <template>
-    <nav class="sticky top-0 backdrop-blur-md shadow-lg h-[50px] rounded-md z-[1000]">
+
+    <nav class="sticky top-0 backdrop-blur-md shadow-lg h-[50px] rounded-md z-[1000] ">
         <div class="container mx-auto flex justify-between items-center p-4 pt-0">
             <!-- Logo -->
-            <ApplicationLogo class="pop-animated cursor-pointer" @click="scrollToSection('hero-section')" />
+            <div class="flex justify-between items-center gap-10">
+
+                <ApplicationLogo class="pop-animated cursor-pointer" @click="scrollToSection('hero-section')" />
+
+                <ul class="hidden md:flex  text-white font-bold text-lg gap-5">
+                    <li class="pop-animated cursor-pointer z-20 line-effect"
+                        :class="{ 'active-nav-item': GetAppLanguage() === 'en' }"
+                        @click="ChangeAppLanguageUseCase('en')">{{ L("localize-en") }}</li>
+                    <li class="pop-animated cursor-pointer z-20 line-effect"
+                        :class="{ 'active-nav-item': GetAppLanguage() === 'ar' }"
+                        @click="ChangeAppLanguageUseCase('ar')">{{ L("localize-ar") }}</li>
+
+                </ul>
+            </div>
 
             <!-- Hamburger Icon (Only Visible on Mobile) -->
             <button @click="toggleMenu" class="relative w-8 h-8 flex flex-col gap-2 md:hidden z-50 ">
@@ -61,19 +78,19 @@ onMounted(() => {
             </button>
 
             <!-- Desktop Navbar -->
-            <ul class="hidden md:flex space-x-6 text-white font-bold text-2xl">
+            <ul class="hidden md:flex  text-white font-bold text-2xl gap-5">
                 <li class="pop-animated cursor-pointer z-20 line-effect"
                     :class="{ 'active-nav-item': activeSection === 'hero-section' }"
-                    @click="scrollToSection('hero-section')">About</li>
+                    @click="scrollToSection('hero-section')">{{ L("About") }}</li>
                 <li class="pop-animated cursor-pointer z-20 line-effect"
                     :class="{ 'active-nav-item': activeSection === 'our-services-section' }"
-                    @click="scrollToSection('our-services-section')">Services</li>
+                    @click="scrollToSection('our-services-section')">{{ L("Services") }}</li>
                 <li class="pop-animated cursor-pointer z-20 line-effect"
                     :class="{ 'active-nav-item': activeSection === 'our-projects-section' }"
-                    @click="scrollToSection('our-projects-section')">Projects</li>
+                    @click="scrollToSection('our-projects-section')">{{ L("Projects") }}</li>
                 <li class="pop-animated cursor-pointer z-20 line-effect"
                     :class="{ 'active-nav-item': activeSection === 'contact-us-section' }"
-                    @click="scrollToSection('contact-us-section')">Contact</li>
+                    @click="scrollToSection('contact-us-section')">{{ L("Contact") }}</li>
             </ul>
         </div>
 

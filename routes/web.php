@@ -15,6 +15,11 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+Route::post('/change-app-language', function () {
+    session()->put('lang', request('lang'));
+    app()->setLocale(request('lang'));
+    return app()->getLocale();
+})->name('change-lang');
 
 
 
