@@ -2,47 +2,42 @@
 
     <section class="our-values text-white relative  ">
         <h2 class="text-white font-bold text-7xl text-center mb">
-            <!-- <span class="capitalize">Our </span> -->
-            <span class="capitalize text-app-secondary-600">Our</span>
-            <span class="capitalize text-app-primary-700">Values</span>
+
+
+            <span class="capitalize text-app-secondary-600">{{ L("OurValues1") }}</span>
+            <span class="capitalize text-app-primary-700">{{ L("OurValues2") }}</span>
         </h2>
-        <p class="text-center">At DevCoders, we stand on principles that drive every project we touch. These values
-            shape our code and our
-            culture.</p>
+        <p class="text-center my-4 text-lg">{{ L("OurValuesSubheading") }}</p>
 
 
         <!-- <div class="grid  grid-cols-4 gap-1 mt-2 z-20 py-5"> -->
         <div class="grid  grid-cols-1 gap-7 md:grid-cols-2 md:gap-5  lg:grid-cols-4 lg:gap-2  mt-2 z-20 py-5">
 
             <GlassyCard class="z-20" rotated-to-left shifted-to-down>
-                <template v-slot:title>Our Mission </template>
-                <template v-slot:content>Our mission is to empower businesses with cutting-edge technology that drives
-                    growth and unlocks new opportunities.</template>
+                <template v-slot:title>{{ L("OurMission") }}</template>
+                <template v-slot:content>{{ L("OurMissionDescription") }}</template>
                 <template v-slot:icon>
                     <TargetIcon />
                 </template>
             </GlassyCard>
             <GlassyCard class="z-20" rotated-to-right>
-                <template v-slot:title>Our Values</template>
-                <template v-slot:content>We value honesty, innovation, and the relentless pursuit of quality. Our team
-                    thrives by staying curious and always improving.</template>
+                <template v-slot:title>{{ L("OurValues") }}</template>
+                <template v-slot:content>{{ L("OurValuesDescription") }}</template>
                 <template v-slot:icon>
                     <HeartIcon />
                 </template>
             </GlassyCard>
             <GlassyCard class="z-20" rotated-to-left shifted-to-down>
-                <template v-slot:title>Quality First</template>
-                <template v-slot:content>We believe that quality is not negotiable. Every line of code, every design
-                    choice, and every user experience reflects our high standards.</template>
+                <template v-slot:title>{{ L("QualityFirst") }}</template>
+                <template v-slot:content>{{ L("QualityFirstDescription") }}</template>
                 <template v-slot:icon>
                     <CheckCircleIcon />
                 </template>
             </GlassyCard>
 
             <GlassyCard class="z-20" rotated-to-right>
-                <template v-slot:title>Innovation & Curiosity</template>
-                <template v-slot:content>We are driven by curiosity — exploring the latest tech, challenging old ways,
-                    and delivering innovative solutions that push boundaries.</template>
+                <template v-slot:title>{{ L("InnovationAndCuriosity") }}</template>
+                <template v-slot:content>{{ L("InnovationAndCuriosityDescription") }}</template>
                 <template v-slot:icon>
                     <ZapIcon />
                 </template>
