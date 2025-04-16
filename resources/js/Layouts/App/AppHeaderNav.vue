@@ -98,10 +98,13 @@ onMounted(() => {
         <Transition name="slide-down">
             <ul v-if="isMenuOpen"
                 class="absolute top-[50px] left-0 w-full  bg-opacity-90 text-white text-xl flex flex-col items-center py-4 space-y-4  backdrop-blur-md shadow-lg bg-black/90">
-                <li @click="scrollToSection('hero-section'); closeMenu()" class="cursor-pointer">About</li>
-                <li @click="scrollToSection('our-services-section'); closeMenu()" class="cursor-pointer">Services</li>
-                <li @click="scrollToSection('our-projects-section'); closeMenu()" class="cursor-pointer">Projects</li>
-                <li @click="scrollToSection('contact-us-section'); closeMenu()" class="cursor-pointer">Contact</li>
+                <li @click="scrollToSection('hero-section'); closeMenu()" class="cursor-pointer">{{ L("About") }}</li>
+                <li @click="scrollToSection('our-services-section'); closeMenu()" class="cursor-pointer">{{
+                    L("Services") }}</li>
+                <li @click="scrollToSection('our-projects-section'); closeMenu()" class="cursor-pointer">{{
+                    L("Projects") }}</li>
+                <li @click="scrollToSection('contact-us-section'); closeMenu()" class="cursor-pointer">{{ L("Contact")
+                    }}</li>
             </ul>
         </Transition>
     </nav>

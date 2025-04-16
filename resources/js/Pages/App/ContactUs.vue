@@ -2,28 +2,28 @@
     <section class="relative z-50">
 
         <h2 class="text-white font-bold text-7xl text-center mb">
-            <span class="capitalize">Contact</span>
-            <span class="capitalize text-app-primary-700">U</span>
-            <span class="capitalize text-app-secondary-600">S</span>
+            <span class="capitalize text-app-primary-700 mx-2">{{ L("ContactUs1") }}</span>
+            <span class="capitalize text-app-secondary-600">{{ L("ContactUs2") }}</span>
         </h2>
 
-        <div class="flex flex-col gap-3 w-full md:w-[50%] m-auto">
+        <div class="flex flex-col gap-3 w-full md:w-[50%] m-auto my-5">
             <div class="p-[2px] z-20">
                 <input type="text" name="name" class="w-full text-white input-transparent-with-border text-center z-20"
-                    placeholder="Enter Your Name" />
+                    :placeholder='L("EnterYourName")' />
             </div>
             <div class="p-[2px] z-20">
                 <input type="email" name="email" class="w-full text-white input-transparent-with-border text-center"
-                    placeholder="Enter Your Email" />
+                    :placeholder='L("EnterYourEmail")' />
             </div>
             <div class="p-[2px] z-20">
                 <textarea type="text" name="name" class="w-full text-white input-transparent-with-border text-center"
-                    placeholder="Enter Your Message" rows="10" />
+                    :placeholder='L("EnterYourMessage")' rows="10" />
             </div>
 
             <div class="z-20">
                 <button
-                    class="flex justify-center w-full text-center  items-center px-4 py-2 bg-gradient-to-r from-app-primary-700 to-app-secondary-700 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150">submit</button>
+                    class="lex justify-center w-full text-center items-center px-4 py-2 bg-gradient-to-r from-app-primary-700 to-app-secondary-700 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150">{{
+                        L("Submit") }}</button>
             </div>
         </div>
 
@@ -63,6 +63,7 @@ import ProgrammingLanguagesIcon from '@/assets/icons/Computer/ProgrammingLanguag
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
 import ColorEnum from '@/enums/ColorEnum';
+import { L } from '@/utils/translation';
 
 
 </script>
@@ -76,5 +77,9 @@ import ColorEnum from '@/enums/ColorEnum';
     border-style: solid;
     padding: 5px;
     background-color: transparent;
+}
+
+.submit-button {
+    @apply flex justify-center w-full text-center items-center px-4 py-2 bg-gradient-to-r from-app-primary-700 to-app-secondary-700 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150;
 }
 </style>
