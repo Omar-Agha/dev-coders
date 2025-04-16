@@ -63,5 +63,20 @@
   "QualityFirst": "الجودة اولاً",
   "QualityFirstDescription": "نحن نؤمن أن الجودة ليست قابلة للتفاوض. كل سطر من الشيفرة، وكل قرار تصميم، وكل تجربة مستخدم تعكس معاييرنا العالية.",
   "InnovationAndCuriosity": "الابتكار و الفضول",
-  "InnovationAndCuriosityDescription": "يدفعنا الفضول لاستكشاف أحدث التقنيات، وتحدي الأساليب التقليدية، وتقديم حلول مبتكرة تتجاوز الحدود."
+  "InnovationAndCuriosityDescription": "يدفعنا الفضول لاستكشاف أحدث التقنيات، وتحدي الأساليب التقليدية، وتقديم حلول مبتكرة تتجاوز الحدود.",
+  "OurServices1": "خدماتـ",
+  "OurServices2": "ـنا",
+  "OurServicesSubheading": "من الفكرة إلى الإطلاق، نقدم خدمات تطوير رفيعة المستوى لتحويل أفكاركم إلى واقع. اكتشفوا ما يمكننا تحقيقه من أجلكم!",
+  "OurServicesWebDevelopment": "تطوير الويب",
+  "OurServicesWebDevelopmentDescription": "مواقع وتطبيقات ويب مخصصة بأحدث التقنيات لتناسب احتياجاتك.",
+  "OurServicesMobileDevelopment": "تطوير تطبيقات الجوال",
+  "OurServicesMobileDevelopmentDescription": "من الفكرة حتى النشر – نبني تطبيقات iOS و Android عالية الأداء.",
+  "OurServicesUI": "تصميم واجهات وتجربة المستخدم",
+  "OurServicesUIDescription": "تصاميم جذابة وسهلة الاستخدام لتعزيز تجربة المستخدم.",
+  "OurServicesDevOps": "الحوسبة السحابية و DevOps",
+  "OurServicesDevOpsDescription": "حلول سحابية فعالة وأتمتة CI/CD لتسهيل عمليات النشر.",
+  "OurServicesTesting": "اختبار البرمجيات وضمان الجودة",
+  "OurServicesTestingDescription": "نضمن أمان وموثوقية البرمجيات من خلال اختبارات يدوية وآلية وتحسين الأداء وفحص الأمان.",
+  "OurServicesSA": "تحليل الأنظمة والأعمال",
+  "OurServicesSADescription": "نحوّل أفكارك إلى حلول قابلة للتوسع من خلال تحليل احتياجات العمل وتحسين سير العمل وتحديد فرص النمو."
 }

@@ -4,15 +4,13 @@
 
 
         <h2 class="text-white font-bold text-7xl text-center mb ">
-            <span class="capitalize text-app-primary-700 z-20">Our</span>
-            <span class="capitalize text-app-secondary-600 z-20">Services</span>
+            <span class="capitalize text-app-primary-700 z-20">{{ L("OurServices1") }}</span>
+            <span class="capitalize text-app-secondary-600 z-20">{{ L("OurServices2") }}</span>
         </h2>
 
 
 
-        <p class="text-white text-center mb-2 z-20">From concept to deployment, we provide top-tier development services
-            to
-            bring your ideas to life. Explore what we can do for you!</p>
+        <p class="text-white text-center my-3  mb-6 text-lg z-20">{{ L("OurServicesSubheading") }}</p>
 
         <div class="ServicesContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-11 gap-y-6 z-20">
             <Service v-for="(service, index) in services" :key="index" class="service-item z-20" :icon="service.icon"
@@ -48,12 +46,12 @@ import ColorEnum from '@/enums/ColorEnum';
 import GlowingCircle from '@/Components/Shapes/GlowingCircle.vue';
 
 const services = [
-    { icon: "mdi-code-braces", title: "Web Development", content: "Custom-built websites and web apps with modern technologies to fit your needs." },
-    { icon: "mdi-cellphone-check", title: "Mobile App Development", content: "From idea to app store – we build high-performance iOS & Android apps." },
-    { icon: "mdi-palette-outline", title: "UI/UX Design", content: "User-friendly and visually stunning designs to enhance user experience." },
-    { icon: "mdi-cloud-cog-outline", title: "DevOps & Cloud Solutions", content: "Efficient cloud solutions and CI/CD automation for seamless deployments." },
-    { icon: "mdi-test-tube", title: "Software Testing & QA", content: "We ensure your software is secure, reliable, and bug-free with automated & manual testing, performance optimization, and security audits." },
-    { icon: "mdi-chart-bar", title: "Business & System Analysis", content: "Transform your ideas into scalable solutions by analyzing business needs, optimizing workflows, and identifying key growth opportunities." },
+    { icon: "mdi-code-braces", title: L("OurServicesWebDevelopment"), content: L("OurServicesWebDevelopmentDescription") },
+    { icon: "mdi-cellphone-check", title: L("OurServicesMobileDevelopment"), content: L("OurServicesMobileDevelopmentDescription") },
+    { icon: "mdi-palette-outline", title: L("OurServicesUI"), content: L("OurServicesUIDescription") },
+    { icon: "mdi-cloud-cog-outline", title: L("OurServicesDevOps"), content: L("OurServicesDevOpsDescription") },
+    { icon: "mdi-test-tube", title: L("OurServicesTesting"), content: L("OurServicesTestingDescription") },
+    { icon: "mdi-chart-bar", title: L("OurServicesSA"), content: L("OurServicesSADescription") },
 ];
 
 gsap.registerPlugin(ScrollTrigger)

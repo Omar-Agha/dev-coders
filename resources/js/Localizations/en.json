@@ -59,5 +59,20 @@
     "QualityFirst": "Quality First",
     "QualityFirstDescription": "We believe that quality is not negotiable. Every line of code, every design choice, and every user experience reflects our high standards.",
     "InnovationAndCuriosity": "Innovation & Curiosity",
-    "InnovationAndCuriosityDescription": "We are driven by curiosity — exploring the latest tech, challenging old ways, and delivering innovative solutions that push boundaries."
+    "InnovationAndCuriosityDescription": "We are driven by curiosity — exploring the latest tech, challenging old ways, and delivering innovative solutions that push boundaries.",
+    "OurServices1": "Our",
+    "OurServices2": "Services",
+    "OurServicesSubheading": "From concept to deployment, we provide top-tier development services to bring your ideas to life. Explore what we can do for you!",
+    "OurServicesWebDevelopment": "Web Development",
+    "OurServicesWebDevelopmentDescription": "Custom-built websites and web apps with modern technologies to fit your needs.",
+    "OurServicesMobileDevelopment": "Mobile App Development",
+    "OurServicesMobileDevelopmentDescription": "From idea to app store – we build high-performance iOS & Android apps.",
+    "OurServicesUI": "UI/UX Design",
+    "OurServicesUIDescription": "User-friendly and visually stunning designs to enhance user experience.",
+    "OurServicesDevOps": "DevOps & Cloud Solutions",
+    "OurServicesDevOpsDescription": "Efficient cloud solutions and CI/CD automation for seamless deployments.",
+    "OurServicesTesting": "Software Testing & QA",
+    "OurServicesTestingDescription": "We ensure your software is secure, reliable, and bug-free with automated & manual testing, performance optimization, and security audits.",
+    "OurServicesSA": "Business & System Analysis",
+    "OurServicesSADescription": "Transform your ideas into scalable solutions by analyzing business needs, optimizing workflows, and identifying key growth opportunities."
 }
