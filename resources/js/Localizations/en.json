@@ -74,5 +74,10 @@
     "OurServicesTesting": "Software Testing & QA",
     "OurServicesTestingDescription": "We ensure your software is secure, reliable, and bug-free with automated & manual testing, performance optimization, and security audits.",
     "OurServicesSA": "Business & System Analysis",
-    "OurServicesSADescription": "Transform your ideas into scalable solutions by analyzing business needs, optimizing workflows, and identifying key growth opportunities."
+    "OurServicesSADescription": "Transform your ideas into scalable solutions by analyzing business needs, optimizing workflows, and identifying key growth opportunities.",
+    "OurProjects1": "Our",
+    "OurProjects2": "Projects",
+    "BreelandoProjectDescription": "Brelando is a mobile project designed to share content with users. The app supports real-time messaging, Firebase integration, video processing, and many other features.",
+    "EducarProjectDescription": "Educar is a mobile app designed to streamline the management of car training courses. It allows students to easily schedule and reserve their practical driving lessons.",
+    "ChatZoneProjectDescription": "Chat Zone is an iOS/Android application that connects users in real time. It supports live streaming and instant messaging for seamless, interactive communication."
 }

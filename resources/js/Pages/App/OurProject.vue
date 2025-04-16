@@ -31,7 +31,7 @@ const projects = [
     // },
     {
         ProjectName: "Breelando",
-        ProjectDescription: " Brelando is mobile project was designed to share content with users.  the app supports realtime message, firebase, video processing, and many other ...",
+        ProjectDescription: L("BreelandoProjectDescription"),
         Image: brelandoPoster,
         SiteUrl: "",
         googlPlayUrl: "https://play.google.com/store/apps/details?id=com.breelando.breelando&pcampaignid=web_share",
@@ -40,7 +40,7 @@ const projects = [
     },
     {
         ProjectName: "Educar",
-        ProjectDescription: "Educar is mobile app that helps to manage car training lessons & courses, by scheduling and reserving practical lesson for students",
+        ProjectDescription: L("EducarProjectDescription"),
         Image: educarPoster,
         SiteUrl: "",
         googlPlayUrl: "",
@@ -50,7 +50,7 @@ const projects = [
     },
     {
         ProjectName: "ChatZone",
-        ProjectDescription: "Chat Zone is an ios/android application that connects users with each other, this app supports realtime communication with live stream and realtime chat  ",
+        ProjectDescription: L("ChatZoneProjectDescription"),
         Image: ChatZonePoster,
         SiteUrl: "",
         googlPlayUrl: "",
@@ -81,8 +81,8 @@ onMounted(() => {
     <div class="relative">
 
         <h2 class="text-white font-bold text-7xl text-center mb">
-            <span class="capitalize text-app-primary-700">Our</span>
-            <span class="capitalize text-app-secondary-600">Projects</span>
+            <span class="capitalize text-app-primary-700">{{ L("OurProjects1") }}</span>
+            <span class="capitalize text-app-secondary-600">{{ L("OurProjects2") }}</span>
         </h2>
 
 
