@@ -5,6 +5,7 @@ import LargeSquare from '@/Components/Shapes/LargeSquare.vue';
 import SmallSquare from '@/Components/Shapes/SmallSquare.vue';
 import ColorEnum from '@/enums/ColorEnum';
 import { scrollToSection } from '@/utils/pageUtils';
+import { L } from '@/utils/translation';
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
@@ -41,16 +42,25 @@ onMounted(() => {
     <!-- grid-cols-3 md:grid-cols-6 -->
     <section class="grid grid-cols-1 lg:grid-cols-3 relative">
         <div class="flex flex-col items-start justify-center space-y-4 p-8 left z-20">
-            <h1 class="text-7xl  text-white font-light animate blur-reveal">
-                Your <span class="text-app-primary-glow font-bold ">Vision</span><br>
-                Our <span class="text-app-secondary-glow font-extrabold ">Code</span>
+            <h1 class="text-7xl  text-white font-light animate blur-reveal grid grid-cols-2 grid-rows-2">
+                <span>{{ L("Slogan1-word1") }}</span>
+                <span class="text-app-primary-glow font-bold ">{{ L("Slogan1-word2") }}</span>
+                <span>{{ L("Slogan2-word1") }}</span>
+                <span class="text-app-secondary-glow font-extrabold ">{{ L("Slogan2-word2") }}</span>
+
+
+
+                <!-- {{ L("Slogan1-word1") }} <span class="text-app-primary-glow font-bold ">{{ L("Slogan1-word2")
+                }}</span><br>
+                {{ L("Slogan2-word1") }} <span class="text-app-secondary-glow font-extrabold ">{{ L("Slogan2-word2")
+                }}</span> -->
             </h1>
             <p class="text-gray-300 max-w-md blur-reveal">
-                Welcome to a world where ideas become reality. <br class="hidden lg:block" />
-                Ready to bring yours to life?
+                {{ L("HeroSectionSubBody1") }} <br class="hidden lg:block" />
+                {{ L("HeroSectionSubBody2") }}
             </p>
             <button class="primary-button" @click="scrollToSection('contact-us-section')">
-                Start Your Project
+                {{ L("StartYourProject") }}
             </button>
         </div>
         <div class="col-span-2 right z-20">
