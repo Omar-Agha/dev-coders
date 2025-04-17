@@ -6,6 +6,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+
+
 Route::get('/', function () {
 
     return Inertia::render('App/Home', [
@@ -20,7 +22,6 @@ Route::post('/change-app-language', function () {
     app()->setLocale(request('lang'));
     return app()->getLocale();
 })->name('change-lang');
-
 
 
 Route::middleware([
