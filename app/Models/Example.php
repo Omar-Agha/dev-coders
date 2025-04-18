@@ -9,28 +9,31 @@ class Example extends Model
 {
     use HasFactory;
 
-
-    protected $guarded = ['id'];
-
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array<int, string>
-     */
-    protected $appends = [
-        // 'profile_photo_url',
+    protected $fillable = [
+        'name',
+        'father_name',
+        'mother_name',
+        'birth_date',
+        'avatar',
+        'description',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+
+
+    protected $appends = [
+        'avatar_url',
+    ];
+
+
     protected function casts(): array
     {
         return [
-            // 'email_verified_at' => 'datetime',
-            // 'password' => 'hashed',
+            'birth_date' => 'datetime',
         ];
+    }
+
+    protected function getAvatarUrlAttribute()
+    {
+        return asset($this->avatar);
     }
 }

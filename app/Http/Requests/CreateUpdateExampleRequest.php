@@ -23,7 +23,10 @@ class CreateUpdateExampleRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'father_name' => 'nullable'
+            'father_name' => 'nullable',
+            'mother_name' => 'required',
+            'birth_date' => 'nullable|date',
+            'uploaded_avatar' => 'file|required',
         ];
     }
 }

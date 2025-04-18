@@ -36,5 +36,5 @@ Route::middleware([
         })->name('dashboard');
 
 
-        Route::resource('examples', ExampleInertiaController::class)->except(['create', 'edit']);
+        Route::resource('Examples', ExampleInertiaController::class)->except(['create', 'edit']);
     });

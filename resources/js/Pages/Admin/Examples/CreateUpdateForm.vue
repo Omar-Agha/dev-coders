@@ -2,42 +2,47 @@
 
     <VCard>
         <VCardTitle>
-            <span v-if="!isEdit" class="headline">{{ $t("CreateName") }}</span>
-            <span v-else class="headline">{{ $t("UpdateRecord") }}</span>
+            <span v-if="!isEdit" class="headline">{{translate('Create')}}</span>
+            <span v-else class="headline">{{translate('UpdateRecord')}}</span>
         </VCardTitle>
 
         <VForm @submit.prevent>
 
 
             <VCardText>
-                <VTextField v-model="recordForm.name" :label="translate('Name')"
+            
+            	<VTextField 
+            	
+				
+                	v-model="recordForm.name" :label="translate('Name')"
                     :error-messages="appPage.props.errors.name || v$.name.$errors.map(e => e.$message)" />
-
-                <VTextField v-model="recordForm.father_name" :label="translate('FatherName')"
+            	<VTextField 
+            	
+				
+                	v-model="recordForm.father_name" :label="translate('FatherName')"
                     :error-messages="appPage.props.errors.father_name || v$.father_name.$errors.map(e => e.$message)" />
-
-                <VTextField v-model="recordForm.mother_name" :label="translate('MotherName')"
+            	<VTextField 
+            	
+				
+                	v-model="recordForm.mother_name" :label="translate('MotherName')"
                     :error-messages="appPage.props.errors.mother_name || v$.mother_name.$errors.map(e => e.$message)" />
-
-
-                <VDateInput v-model="recordForm.birth_date" :label="translate('BirthDate')"
+            	
+            	<VDateInput 
+				
+                	v-model="recordForm.birth_date" :label="translate('BirthDate')"
                     :error-messages="appPage.props.errors.birth_date || v$.birth_date.$errors.map(e => e.$message)" />
-
-
-                <VFileInput v-model="recordForm.uploaded_avatar" :label="translate('Avatar')"
+            	
+            	
+				<VFileInput 
+                	v-model="recordForm.uploaded_avatar" :label="translate('Avatar')"
                     :error-messages="appPage.props.errors.uploaded_avatar || v$.uploaded_avatar.$errors.map(e => e.$message)" />
-
-
-
-
-
+               
             </VCardText>
             <VCardActions>
 
-                <VBtn type="submit" color="primary" @click="saveRecord">{{ isEdit ? translate("Update") :
-                    translate("Create") }}
+                <VBtn type="submit" color="primary" @click="saveRecord">{{isEdit ? translate('Update') : translate('Create')}}
                 </VBtn>
-                <VBtn @click="closeDialog">{{ translate('Cancel') }}</VBtn>
+                <VBtn @click="closeDialog">{{translate('Cancel')}}</VBtn>
             </VCardActions>
         </VForm>
 
@@ -54,7 +59,7 @@
 <script setup lang="ts">
 
 import { ref, reactive, watch } from 'vue';
-import { VBtn, VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, VFileInput, VForm, VTextField } from 'vuetify/lib/components/index.mjs';
+import { VBtn, VCard, VCardActions, VCardText, VCardTitle, VFileInput, VForm, VTextField } from 'vuetify/lib/components/index.mjs';
 
 import { usePage } from '@inertiajs/vue3';
 import { getRecordById, initialCreateForm, storeFormRules, storeRecordApi, updateRecordApi } from './core';

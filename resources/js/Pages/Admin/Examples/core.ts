@@ -3,9 +3,8 @@ import { router } from "@inertiajs/vue3";
 import { required } from "@vuelidate/validators";
 import axios from "axios";
 import { date } from "yup";
-import { CreateRecord } from "./Interfaces/UserInterfaces";
 
-const ROUTE_NAME = "examples";
+const ROUTE_NAME = "Examples";
 
 export const breadcrumbs = [
     {
@@ -26,41 +25,40 @@ export const breadcrumbs = [
 ];
 
 export const gridHeaders = [
-    { title: translate("Name"), align: "start", value: "name", sortable: true },
-    { title: translate("FatherName"), key: "father_name" },
-    { title: translate("MotherName"), key: "mother_name" },
-    { title: translate("BirthDate"), key: "birth_date" },
-    { title: translate("Avatar"), key: "avatar" },
     { title: translate("Actions"), key: "actions", sortable: false },
+    { title: translate('Name'), align: "start", value: "name", sortable: true },
+    { title: translate('FatherName'), align: "start", value: "father_name", sortable: true },
+    { title: translate('MotherName'), align: "start", value: "mother_name", sortable: true },
+    { title: translate('BirthDate'), align: "start", value: "birth_date", sortable: true },
+    { title: translate('Avatar'), align: "start", value: "avatar", sortable: true },
+    { title: translate('Description'), align: "start", value: "description", sortable: true },
 ];
 
 export const initialCreateForm = {
-    name: "",
-    father_name: "",
-    birth_date: new Date(),
+    name: null,
+    father_name: null,
     mother_name: null,
+    birth_date: null,
     uploaded_avatar: null,
 };
 
 export const storeFormRules = {
     name: { required },
-    birth_date: { required },
     father_name: {},
     mother_name: { required },
+    birth_date: {},
     uploaded_avatar: { required },
 };
 
 export const initialUpdateForm = {
-    birth_date: new Date(),
-    father_name: "",
-    name: "",
+    title: null,
+    description: null,
     uploaded_avatar: null,
 };
 
 export const updateFormRules = {
-    name: { required },
-    birth_date: { required }, // 'sometimes' means it's optional, so no need for a validator
-    father_name: {},
+    title: { required },
+    description: {},
     uploaded_avatar: {},
 };
 
@@ -124,7 +122,6 @@ export const updateRecordApi = (
     onBeforeCallback,
     onAfterCallback
 ) => {
-
     recordState["_method"] = "PUT";
     router.post(route(`${ROUTE_NAME}.update`, recordId), recordState, {
 
@@ -147,23 +144,20 @@ export const updateRecordApi = (
 };
 
 export const storeRecordApi = (
-    recordState: CreateRecord,
+    recordState,
     onSuccessCallback: (name: string) => void,
     onErrorCallback: (name: string) => void,
     onBeforeCallback: () => void,
     onAfterCallback: () => void
 ) => {
-
     router.post(route(`${ROUTE_NAME}.store`), recordState, {
-
-
         onError: (err) => {
+
             if (Object.hasOwn(err, "business_logic"))
                 if (onErrorCallback != null)
                     onErrorCallback(err.business_logic);
         },
         onSuccess: (data) => {
-            console.log(data);
 
             if (onSuccessCallback != null) onSuccessCallback(data);
         },

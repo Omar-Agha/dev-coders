@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\FileUploadHelper;
 use App\Http\Requests\CreateUpdateExampleRequest;
 
 use App\Models\Example;
@@ -13,12 +14,14 @@ use Laravel\Jetstream\Jetstream;
 
 class ExampleInertiaController extends Controller
 {
+    private $directory_name = 'Examples';
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
+
         if (request()->wantsJson()) {
             return $this->getExampleList();
         }
@@ -40,8 +43,12 @@ class ExampleInertiaController extends Controller
     {
         $data = $request->validated();
 
+        if ($request->hasFile('uploaded_avatar'))
+            $data['avatar'] = FileUploadHelper::upload_file($request->file('uploaded_avatar'), $this->directory_name);
+
+
         $example = Example::create($data);
-        return redirect()->route('examples.index');
+        return redirect()->route('Examples.index');
     }
 
     /**
@@ -68,6 +75,9 @@ class ExampleInertiaController extends Controller
     public function update(CreateUpdateExampleRequest $request, Example $example)
     {
         $data = $request->validated();
+        if ($request->hasFile('uploaded_avatar'))
+            $data['avatar'] = FileUploadHelper::upload_file($request->file('uploaded_avatar'), $this->directory_name);
+
 
         $updated_example = $example->update($data);
     }

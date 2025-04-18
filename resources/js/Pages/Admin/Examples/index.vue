@@ -5,15 +5,15 @@
             <VCol cols="12" class="pb-0">
                 <div class="d-flex justify-between  items-center  mb-[-10px] w-100 my-2">
                     <div class="d-flex justify-between  items-center">
-                        <span class="dash-headline me-5">{{ translate('games') }}</span>
+                        <span class="dash-headline me-5">{{ translate('Examples') }}</span>
                         <VBreadcrumbs :items="breadcrumbs" class="text-sm"></VBreadcrumbs>
                     </div>
                     <div class="d-flex gap-3">
 
-                        <VBtn color="primary" @click="openCreateDialog" append-icon="mdi-plus">{{
-                            translate('add_game') }}
+                        <VBtn color="primary" @click="openCreateDialog" append-icon="mdi-plus">
+                            {{ translate('AddExample') }}
                         </VBtn>
-                        <VBtn color="secondary " @click="openCreateDialog">{{ translate('some_other_action') }}</VBtn>
+
                     </div>
 
                 </div>
@@ -30,7 +30,7 @@
                                     variant="outlined" density="compact" />
 
 
-                                <VSelect label="Examples" class="col-span-4"
+                                <VSelect label="Games" class="col-span-4"
                                     :items="['Fifa', 'Call of duty', 'Blood borne',]" variant="outlined"
                                     density="compact" />
 
@@ -72,7 +72,7 @@
                                         density="compact" :placeholder="translate('search_place_holder')" />
                                     <VBtn color="primary" icon="mdi-magnify" @click="refreshList" />
                                     <VSpacer />
-                                    <VToolbarTitle class="text-end">{{ translate('game_list') }}</VToolbarTitle>
+                                    <VToolbarTitle class="text-end">{{ translate('ExampleList') }}</VToolbarTitle>
                                 </VToolbar>
 
 
@@ -119,15 +119,15 @@
 
 
         <VDialog v-model="createDialog" max-width="600px">
-
-            <CreateForm @close-dialog="createDialog = false" @save-success="onSaveSuccess"
+            <CreateUpdateForm @close-dialog="createDialog = false" @save-success="onSaveSuccess"
                 :editing-record-id="editRecordId" />
         </VDialog>
 
         <VDialog v-model="updateDialog" max-width="600px">
-
-            <UpdateForm @close-dialog="updateDialog = false" @save-success="onSaveSuccess"
+            <CreateUpdateForm @close-dialog="updateDialog = false" @save-success="onSaveSuccess"
                 :editing-record-id="editRecordId" />
+
+
         </VDialog>
 
 
@@ -139,12 +139,13 @@
     </AdminLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 
 
 import { ref, reactive, watch } from 'vue';
 import { VBreadcrumbs, VBtn, VCard, VCardText, VCol, VDataTableServer, VDialog, VExpansionPanel, VExpansionPanels, VList, VListItem, VListItemTitle, VMenu, VRadio, VRadioGroup, VRow, VSelect, VSkeletonLoader, VSpacer, VSwitch, VTextField, VToolbar, VToolbarTitle } from 'vuetify/lib/components/index.mjs';
+
 
 import { breadcrumbs, deleteRecordApi, getRecordsListApi, gridHeaders, initialFilterForm } from './core';
 import ConfirmationAlert from '@/Components/ConfirmationDialog.vue';
@@ -152,11 +153,9 @@ import SnackMessage from '@/Components/SnackMessage.vue';
 import PageLoader from '@/Components/PageLoader.vue';
 import { VDateInput } from 'vuetify/lib/labs/components.mjs';
 import { translate } from '@/utils/translation';
-import CreateForm from './CreateForm.vue';
-import UpdateForm from './UpdateForm.vue';
 
+import CreateUpdateForm from './CreateUpdateForm.vue';
 import AdminLayout from '@/Layouts/Admin/AdminLayout.vue';
-
 const menu = ref(false)
 
 const snackMessage = ref();
@@ -170,6 +169,8 @@ const searchTime = ref('');
 const search = ref('');
 var editRecordId = null;
 const headers = ref(gridHeaders);
+
+
 
 
 
@@ -282,9 +283,6 @@ const onBeforePageRequestHandler = () => {
 const onAfterPageRequestHandler = () => {
     pageLoader.value = false;
 }
-
-
-
 
 
 </script>

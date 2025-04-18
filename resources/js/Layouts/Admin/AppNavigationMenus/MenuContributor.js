@@ -10,11 +10,13 @@ var MenuContributor = [
     {
         title: translate("Example"),
         icon: "mdi-home",
-        href: "examples.index",
-        children: [],
+        href: "Examples.index",
+        children: [
+
+        ],
     },
-    
-    
+
+
 ];
 
 export default MenuContributor;
