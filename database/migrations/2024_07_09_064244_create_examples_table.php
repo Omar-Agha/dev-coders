@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
+            $table->string('father_name')->nullable();
+            $table->string('mother_name');
+            $table->date('birth_date')->nullable();
+            $table->string('avatar');
             $table->string('description')->nullable();
         });
     }

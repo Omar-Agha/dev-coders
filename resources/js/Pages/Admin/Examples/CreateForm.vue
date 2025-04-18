@@ -51,10 +51,10 @@
     <PageLoader ref="pageLoader" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import { ref, reactive, watch } from 'vue';
-import { VBtn, VCard, VCardActions, VCardText, VCardTitle, VFileInput, VForm, VTextField } from 'vuetify/lib/components/index.mjs';
+import { VBtn, VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, VFileInput, VForm, VTextField } from 'vuetify/lib/components/index.mjs';
 
 import { usePage } from '@inertiajs/vue3';
 import { getRecordById, initialCreateForm, storeFormRules, storeRecordApi, updateRecordApi } from './core';

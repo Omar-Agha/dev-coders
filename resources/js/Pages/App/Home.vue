@@ -36,6 +36,7 @@ defineProps({
     <div class="bg-app-primary-dark min-h-screen">
         <main class=" ">
             <AppHeaderNav class="h-[15vh]" />
+
             <div class="container mx-auto">
 
                 <Hero class="min-h-[85vh]" id="hero-section" />

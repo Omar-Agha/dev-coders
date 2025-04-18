@@ -17,7 +17,7 @@ const intervalTime = 4; // Change this value to set the interval in seconds
 onMounted(() => {
     const logo_rotate_class = "rotate-icon"
     setInterval(() => {
-
+        if (appLogo.value == null) return;
         if (appLogo.value.classList.contains(logo_rotate_class)) {
             appLogo.value.classList.remove(logo_rotate_class)
         }

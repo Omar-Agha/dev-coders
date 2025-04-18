@@ -3,6 +3,7 @@ import { router } from "@inertiajs/vue3";
 import { required } from "@vuelidate/validators";
 import axios from "axios";
 import { date } from "yup";
+import { CreateRecord } from "./Interfaces/UserInterfaces";
 
 const ROUTE_NAME = "examples";
 
@@ -123,9 +124,10 @@ export const updateRecordApi = (
     onBeforeCallback,
     onAfterCallback
 ) => {
+
     recordState["_method"] = "PUT";
     router.post(route(`${ROUTE_NAME}.update`, recordId), recordState, {
-        
+
         onBefore: () => {
             if (onBeforeCallback != null) onBeforeCallback();
         },
@@ -145,19 +147,24 @@ export const updateRecordApi = (
 };
 
 export const storeRecordApi = (
-    recordState,
-    onSuccessCallback,
-    onErrorCallback,
-    onBeforeCallback,
-    onAfterCallback
+    recordState: CreateRecord,
+    onSuccessCallback: (name: string) => void,
+    onErrorCallback: (name: string) => void,
+    onBeforeCallback: () => void,
+    onAfterCallback: () => void
 ) => {
+
     router.post(route(`${ROUTE_NAME}.store`), recordState, {
+
+
         onError: (err) => {
             if (Object.hasOwn(err, "business_logic"))
                 if (onErrorCallback != null)
                     onErrorCallback(err.business_logic);
         },
         onSuccess: (data) => {
+            console.log(data);
+
             if (onSuccessCallback != null) onSuccessCallback(data);
         },
         onBefore: () => {

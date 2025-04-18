@@ -30,7 +30,7 @@
                                     variant="outlined" density="compact" />
 
 
-                                <VSelect label="Games" class="col-span-4"
+                                <VSelect label="Examples" class="col-span-4"
                                     :items="['Fifa', 'Call of duty', 'Blood borne',]" variant="outlined"
                                     density="compact" />
 
