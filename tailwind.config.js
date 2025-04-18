@@ -80,6 +80,8 @@ export default {
                     "computer_scene_horizontal 5s linear infinite",
                 "computer-scene-laptop":
                     "computer_scene_laptop 5s linear infinite",
+                slowping: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+
             },
         },
     },

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import AppHeaderNav from '@/Layouts/App/AppHeaderNav.vue';
 import Hero from './Hero.vue';
 import AboutUs from './AboutUs.vue';
@@ -12,6 +12,9 @@ import ContactUs from './ContactUs.vue';
 import Spacer from '@/Components/Spacer.vue';
 import OurServices from './OurServices.vue';
 import OurValues from './OurValues.vue';
+import WhatsAppFloatingButton from '@/Components/WhatsAppFloatingButton.vue';
+
+
 
 defineProps({
     canLogin: {
@@ -33,6 +36,9 @@ defineProps({
 </script>
 
 <template>
+    <WhatsAppFloatingButton />
+
+    <!-- <vue-whatsapp phoneNumber="+1111111111" /> -->
     <div class="bg-app-primary-dark min-h-screen">
         <main class=" ">
             <AppHeaderNav class="h-[15vh]" />
@@ -59,4 +65,4 @@ defineProps({
     </div>
 </template>
 
-<style></style>
+<style scoped></style>
