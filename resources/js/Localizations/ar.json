@@ -40,8 +40,10 @@
     "required": "هذه الخانة مطلوبه.",
     "minLength": "يجب أن يكون هذا الحقل {min} حرفًا على الأقل."
   },
-  "localize-en": "انجليزي",
-  "localize-ar": "عربي",
+  "localize-enZ": "انجليزي",
+  "localize-arZ": "عربي",
+  "localize-en": "EN",
+  "localize-ar": "AR",
   "About": "ديف كوديرز",
   "Services": "خدماتنا",
   "Projects": "مشاريعنا",

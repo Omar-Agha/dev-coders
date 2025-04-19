@@ -56,7 +56,7 @@ onMounted(() => {
 
                 <ApplicationLogo class="pop-animated cursor-pointer" @click="scrollToSection('hero-section')" />
 
-                <ul class="hidden md:flex  text-white font-bold text-lg gap-5">
+                <ul class=" flex  text-white font-bold text-lg gap-5">
                     <li class="pop-animated cursor-pointer z-20 line-effect"
                         :class="{ 'active-nav-item': GetAppLanguage() === 'en' }"
                         @click="ChangeAppLanguageUseCase('en')">{{ L("localize-en") }}</li>

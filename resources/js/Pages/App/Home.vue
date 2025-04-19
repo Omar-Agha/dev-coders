@@ -13,6 +13,7 @@ import Spacer from '@/Components/Spacer.vue';
 import OurServices from './OurServices.vue';
 import OurValues from './OurValues.vue';
 import WhatsAppFloatingButton from '@/Components/WhatsAppFloatingButton.vue';
+import { Head } from '@inertiajs/vue3';
 
 
 
@@ -36,9 +37,11 @@ defineProps({
 </script>
 
 <template>
+
+    <Head title="Home" />
     <WhatsAppFloatingButton />
 
-    <!-- <vue-whatsapp phoneNumber="+1111111111" /> -->
+
     <div class="bg-app-primary-dark min-h-screen">
         <main class=" ">
             <AppHeaderNav class="h-[15vh]" />
