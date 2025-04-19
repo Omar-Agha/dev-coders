@@ -62,7 +62,7 @@ onMounted(() => {
                 }}</span> -->
             </h1>
             <p class="text-gray-300 max-w-md blur-reveal text-lg">
-                {{ L("HeroSectionSubBody1") }} <br class="hidden lg:block" />
+                {{ L("HeroSectionSubBody1") }} <br />
                 {{ L("HeroSectionSubBody2") }}
             </p>
             <button class="primary-button" @click="scrollToSection('contact-us-section')">
