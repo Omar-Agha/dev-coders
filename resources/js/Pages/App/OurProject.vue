@@ -91,7 +91,7 @@ onMounted(() => {
             <div v-for="project in projects" class="rounded-2xl ">
                 <Project :app-store-url="project.appStoreUrl" :google-play-url="project.googlPlayUrl"
                     :image="project.Image" :project-name="project.ProjectName"
-                    :project-description="project.ProjectDescription" class="project z-20 w-96 lg:w-[90%]"
+                    :project-description="project.ProjectDescription" class="project z-20 w-80 lg:w-[90%]"
                     :github-url="project.githubUrl" />
                 <!-- w-80 xlg:w-96 -->
             </div>
