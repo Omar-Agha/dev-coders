@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{{-- <html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"> --}}
-<html>
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
+{{-- <html> --}}
     
 <head>
     <meta charset="utf-8">
