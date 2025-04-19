@@ -40,9 +40,9 @@ onMounted(() => {
 
 <template>
     <!-- grid-cols-3 md:grid-cols-6 -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 relative">
-        <div class="flex flex-col items-start justify-center space-y-4 p-8 left z-20">
-            <h1 class="text-7xl  text-white font-light animate blur-reveal">
+    <section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 relative">
+        <div class="flex flex-col items-start md:col-span-2 lg:col-span-1 justify-center space-y-4 p-8 left z-20">
+            <h1 class="text-6xl md:text-7xl text-white font-light animate blur-reveal">
                 <div class="flex gap-3">
                     <div class="flex flex-col">
                         <span>{{ L("Slogan1-word1") }}</span>
@@ -69,7 +69,7 @@ onMounted(() => {
                 {{ L("StartYourProject") }}
             </button>
         </div>
-        <div class="col-span-2 right z-20">
+        <div class="col-span-2 right z-20  w-[100%] sm:w-[120%] lg:w-[110%]">
             <ComputerSvg />
         </div>
         <!-- <div class="hidden md:block "> -->
