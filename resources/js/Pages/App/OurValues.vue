@@ -56,7 +56,7 @@
             <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
 
             <!-- for mobile -->
-            <GlowingCircle class=" absolute right-[80px] top-[60%] animate-float " :opacity="0.25" />
+            <GlowingCircle class="block sm:md absolute right-[80px] top-[60%] animate-float " :opacity="0.25" />
         </div>
 
 

@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
 
     <div
-        class=" group relative w-80 md:w-96 h-52 rounded-2xl overflow-hidden bg-black/30 backdrop-blur-md transition-transform duration-300 hover:scale-105 ">
+        class=" group relative  h-52 rounded-2xl overflow-hidden bg-black/30 backdrop-blur-md transition-transform duration-300 hover:scale-105 ">
         <!-- Background Image -->
         <img :src="props.image"
             class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:brightness-110 group-hover:scale-110" />
