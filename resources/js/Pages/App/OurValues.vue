@@ -52,7 +52,11 @@
             <GlowingCircle class="absolute left-[-400px] top-[0px] animate-float " :opacity="0.25" />
             <GlowingCircle class="absolute left-[25%] top-[10%] animate-float-reverse" :opacity="1"
                 :color="ColorEnum.Blue" />
+
             <GlowingCircle class="absolute left-[900px] top-[-150px] animate-float " :opacity="0.25" />
+
+            <!-- for mobile -->
+            <GlowingCircle class=" absolute right-[80px] top-[60%] animate-float " :opacity="0.25" />
         </div>
 
 

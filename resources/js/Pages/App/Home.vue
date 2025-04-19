@@ -39,7 +39,7 @@ defineProps({
 <template>
 
     <Head title="Home" />
-    <WhatsAppFloatingButton />
+    <WhatsAppFloatingButton class="z-[1000]" />
 
 
     <div class="bg-app-primary-dark min-h-screen">
