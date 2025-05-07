@@ -94,5 +94,6 @@
     "EnterYourEmail": "Enter Your Email",
     "EnterYourMessage": "Your Message",
     "Submit": "Submit",
-    "WeFollow": "We follow a refined process that starts with"
+    "WeFollow": "We follow a refined process that starts with",
+    "Copyright": "© {Date} DevCoders. All rights reserved."
 }

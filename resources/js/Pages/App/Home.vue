@@ -14,6 +14,7 @@ import OurServices from './OurServices.vue';
 import OurValues from './OurValues.vue';
 import WhatsAppFloatingButton from '@/Components/WhatsAppFloatingButton.vue';
 import { Head } from '@inertiajs/vue3';
+import AppFooter from '@/Layouts/App/AppFooter.vue';
 
 
 
@@ -40,15 +41,13 @@ defineProps({
 
     <Head title="Home" />
     <WhatsAppFloatingButton class="z-[1000]" />
-
-
-    <div class="bg-app-primary-dark min-h-screen">
-        <main class=" ">
-            <AppHeaderNav class="h-[15vh]" />
+    <div class="bg-app-primary-dark min-h-screen  ">
+        <AppHeaderNav class="h-[15vh]" />
+        <main class="">
 
             <div class="container mx-auto">
 
-                <Hero class="min-h-[85vh]" id="hero-section" />
+                <!-- <Hero class="min-h-[85vh]" id="hero-section" /> -->
                 <Spacer />
                 <OurValues />
                 <Spacer :size="SpacerSize.X2" />
@@ -63,6 +62,7 @@ defineProps({
             </div>
         </main>
 
+        <!-- <AppFooter class="z-[1000]" /> -->
 
 
     </div>

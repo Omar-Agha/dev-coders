@@ -16,7 +16,7 @@ input:focus {
 
 @layer base {
     body {
-        @apply font-ev bg-app-primary-dark pb-28 overflow-x-clip;
+        @apply font-ev bg-app-primary-dark overflow-x-clip;
         ;
     }
 }
