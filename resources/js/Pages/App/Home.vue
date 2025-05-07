@@ -47,7 +47,7 @@ defineProps({
 
             <div class="container mx-auto">
 
-                <!-- <Hero class="min-h-[85vh]" id="hero-section" /> -->
+                <Hero class="min-h-[85vh]" id="hero-section" />
                 <Spacer />
                 <OurValues />
                 <Spacer :size="SpacerSize.X2" />
